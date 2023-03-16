@@ -1,0 +1,24 @@
+:root {
+  --background1: linear-gradient(180deg, #EA4F32 0%, #F06B52 0.01%, #F45033 0.02%, #E80F5D 100%);
+  --background2: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+.first-page {
+  background-color: var(--background1);
+  text-align: center;
+
+}
+
+
+
+
