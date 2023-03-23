@@ -31,6 +31,22 @@ body {
   gap: 13px;
 }
 
+.tap-anywhere {
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  color: #FFBABA;
+  height: 40px;
+  width: 175px;
+}
+
 
 
 
