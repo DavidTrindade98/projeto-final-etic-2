@@ -1,8 +1,12 @@
 import "../../styles/welcome/SignupORlogin.css";
 import "../../styles/App.css";
 import logo from "../../assets/logo.svg";
+import { useNavigate } from "react-router-dom";
 
 export default function SignupORloginPage() {
+
+  const navigate = useNavigate();
+
   return (
     <default-screen>
       <div className="SignupORloginPage">
@@ -14,6 +18,10 @@ export default function SignupORloginPage() {
         <text id="signup-to-start">
             Sign up to start or login to your account.
         </text>
+        <button className="signup-button-overlay" onClick={() => navigate("/Signup")} >
+          <text id="signup-text">Sign up</text>
+        </button>
+        <text id="login-text-button">Log in</text>
         </div>
       </div>
     </default-screen>
