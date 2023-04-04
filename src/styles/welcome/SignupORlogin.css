@@ -11,18 +11,38 @@
   position: absolute;
   width: 198px;
   height: 47px;
-  top: 17%;
+  top: 17vh;
+}
+
+.text-signup-page {
+  display: flex;
+  flex-direction: column;
+  margin-top: 33vh;
 }
 
 #hey-have-we-met {
-  position: absolute;
+  display: flex;
   max-width: 242px;
   max-height: 88px;
-  top: 33%;
   font-family: var(--inter-font);
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
   line-height: 44px;
   color: #ffffff;
+  left: 13%;
+}
+
+#signup-to-start {
+  display: flex;
+  max-width: 290px;
+  max-height: 18px;
+  left: 13%;
+  padding-top: 2vh;
+  font-family: var(--inter-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffabab;
 }

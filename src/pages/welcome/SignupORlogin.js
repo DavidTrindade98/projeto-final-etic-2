@@ -7,9 +7,14 @@ export default function SignupORloginPage() {
     <default-screen>
       <div className="SignupORloginPage">
         <img src={logo} id="logo-signup" alt="logo" />
+        <div className="text-signup-page">
         <text id="hey-have-we-met">
           Hey,<br></br>have we met?
         </text>
+        <text id="signup-to-start">
+            Sign up to start or login to your account.
+        </text>
+        </div>
       </div>
     </default-screen>
   );
