@@ -1,0 +1,28 @@
+@import "../App.css";
+
+.SignupORloginPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#logo-signup {
+  position: absolute;
+  width: 198px;
+  height: 47px;
+  top: 17%;
+}
+
+#hey-have-we-met {
+  position: absolute;
+  max-width: 242px;
+  max-height: 88px;
+  top: 33%;
+  font-family: var(--inter-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: #ffffff;
+}
