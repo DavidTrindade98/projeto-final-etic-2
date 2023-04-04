@@ -1,17 +1,16 @@
-import '../../styles/App.css';
+import '../../styles/welcome/welcome.css';
 import logo from '../../assets/logo.svg';
-import logo_slogan from '../../assets/logo_slogan.svg'
 
 export default function FirstPage() {
   return (
       <div className='first-page'>
-        <div className='logo'>
+        <div className='logo-slogan'>
             <img src={logo} id="logo" alt='logo' />
-            <img src={logo_slogan} id="logo_slogan" alt='logo_slogan'></img>
-        <div className='tap-anywhere'>
-          <p>Tap anywhere to<br></br>continue</p>
+            <text>Live it like the Locals</text>
         </div>
-        </div>
+      <div className='tap-anywhere'>
+        <text>Tap anywhere to<br></br>continue</text>
+      </div>
       </div>
   );
 }
