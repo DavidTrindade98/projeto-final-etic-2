@@ -32,3 +32,18 @@
   color: var(--background2);
   left: 13vh;
 }
+
+#signup-to-start-or-login{
+  display: flex;
+  max-width: 290px;
+  max-height: 18px;
+  left: 13vh;
+  margin-top: 2vh;
+  font-family: var(--inter-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffabab;
+  transition: fade-out;
+}

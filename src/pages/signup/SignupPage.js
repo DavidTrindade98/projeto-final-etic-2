@@ -8,7 +8,12 @@ export default function SignupPage() {
       <div className="SignupPage">
         <img src={logo} id="logo-signup-page" alt="logo" />
         <div className="sign-up-page-text">
-          
+          <text id="sign-up-with-email">
+            Sign up<br></br>with e-mail
+          </text>
+          <text id="signup-to-start-or-login">
+            Sign up to start or login to your account.
+          </text>
         </div>
       </div>
     </default-screen>
