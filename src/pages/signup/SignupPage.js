@@ -11,9 +11,7 @@ export default function SignupPage() {
           <text id="sign-up-with-email">
             Sign up<br></br>with e-mail
           </text>
-          <text id="signup-to-start-or-login">
-            Sign up to start or login to your account.
-          </text>
+          
         </div>
       </div>
     </default-screen>

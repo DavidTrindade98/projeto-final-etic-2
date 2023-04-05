@@ -88,4 +88,26 @@
   color: #ffbaba;
 }
 
+/*DOM Manipulation */
+
+#noDisplayText {
+  display: flex;
+  max-width: 290px;
+  max-height: 18px;
+  left: 13vh;
+  margin-top: 2vh;
+  font-family: var(--inter-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffabab;
+  animation: fadeOut 8s;
+  -webkit-animation: fadeOut 800ms;
+  -moz-animation: fadeOut 800ms;
+  -o-animation: fadeOut 800ms;
+  -ms-animation: fadeOut 800ms;
+  opacity: 0;
+  visibility: 0;
+}
 
