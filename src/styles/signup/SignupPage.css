@@ -1,5 +1,34 @@
 @import "../App.css";
 
-.SignupPage{
-    
+.SignupPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#logo-signup-page {
+  position: absolute;
+  width: 198px;
+  height: 47px;
+  top: 17vh;
+}
+
+.sign-up-page-text {
+  display: flex;
+  flex-direction: column;
+  margin-top: 33vh;
+}
+
+#sign-up-with-email {
+  display: flex;
+  max-width: 242px;
+  max-height: 88px;
+  font-family: var(--inter-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: var(--background2);
+  left: 13vh;
 }
