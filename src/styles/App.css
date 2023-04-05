@@ -26,6 +26,8 @@ default-screen {
   transform: translate(-50%, -50%);
 }
 
+/*fadeOut Elements Effect*/
+
 @keyframes fadeOut {
   0% {
     opacity: 1;
@@ -34,35 +36,15 @@ default-screen {
     opacity: 0;
   }
 }
-@-webkit-keyframes fadeOut {
-  0% {
-    opacity: 1;
+
+/*fadeIn Elements Effect*/
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
-  100% {
-    opacity: 0;
-  }
-}
-@-moz-keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@-o-keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@-ms-keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
+  
