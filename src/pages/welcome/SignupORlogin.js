@@ -23,24 +23,31 @@ export default function SignupORloginPage() {
         <img src={logo} id="logo-signup" alt="logo" />
         <div className="text-signup-page">
           <text id={isClicked ? "hey-have-we-met" : "hey-have-we-met-hide"}>
-              Hey,<br></br>have we met?
+            Hey,<br></br>have we met?
           </text>
-          <text id={!isClicked ? "signup-with-email" : "hey-have-we-met-hide"}  >
-              Sign up<br></br>with e-mail
+          <text id={!isClicked ? "signup-with-email" : "hey-have-we-met-hide"}>
+            Sign up<br></br>with e-mail
           </text>
           <text
             id={isClicked ? "signup-to-start" : "signup-to-start-no-display"}
           >
             Sign up to start or login to your account.
           </text>
+          <form className={isClicked ? "signup-form-hide" : "signup-form"}>
+            <input type="name" id="Name" placeholder="Name" /><br></br>
+            <input type="email" id="E-mail" placeholder="E-mail"/><br></br>
+            <input type="password" id="Password"  placeholder="Password"/>
+          </form>
           <button
             className={
               isClicked ? "signup-button-overlay" : "signup-button-overlay-2"
             }
+      
             onClick={() => {
               Clicked();
               notClicked();
             }}
+
           >
             <text id="signup-text">Sign up</text>
           </button>
