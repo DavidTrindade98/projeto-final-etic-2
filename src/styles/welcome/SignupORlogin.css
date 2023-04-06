@@ -31,6 +31,11 @@
   line-height: 44px;
   color: var(--background2);
   left: 13vh;
+  animation: fadeIn 8s;
+  -webkit-animation: fadeIn 800ms;
+  -moz-animation: fadeIn 800ms;
+  -o-animation: fadeIn 800ms;
+  -ms-animation: fadeIn 800ms;
 }
 
 #signup-to-start {
@@ -102,7 +107,7 @@
 
 /*DOM Manipulation */
 
-#hey-have-we-met-2{
+#hey-have-we-met-hide{
   display: flex;
   max-width: 242px;
   max-height: 88px;
@@ -113,7 +118,26 @@
   line-height: 44px;
   color: var(--background2);
   left: 13vw;
-  content: "Sign up with e-mail";
+  animation: fadeOut 8s;
+  -webkit-animation: fadeOut 800ms;
+  -moz-animation: fadeOut 800ms;
+  -o-animation: fadeOut 800ms;
+  -ms-animation: fadeOut 800ms;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#sign-up-with-email{
+  display: flex;
+  max-width: 242px;
+  max-height: 88px;
+  font-family: var(--inter-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: var(--background2);
+  left: 13vw;
 }
 
 #signup-to-start-no-display {
@@ -198,6 +222,7 @@
 
 #logo-back-show {
   position: absolute;
+  cursor: pointer;
   width: 11px;
   height: 23px;
   left: 9.86vw;
@@ -207,7 +232,9 @@
   -moz-animation: fadeIn 800ms;
   -o-animation: fadeIn 800ms;
   -ms-animation: fadeIn 800ms;
+
 }
+
 
 
 

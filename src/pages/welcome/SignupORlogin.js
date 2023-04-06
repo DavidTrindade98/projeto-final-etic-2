@@ -5,12 +5,10 @@ import { useState } from "react";
 import back from "../../assets/back.svg";
 
 export default function SignupORloginPage() {
-  
   const [isClicked, notClicked] = useState(true);
 
   function Clicked() {
     notClicked(!isClicked);
-    console.log("Clicked");
   }
 
   return (
@@ -18,15 +16,17 @@ export default function SignupORloginPage() {
       <div className="SignupORloginPage">
         <img
           src={back}
-          id={isClicked ? "logo-back-hide" : "logo-back-show"} alt="logo-back"
+          id={isClicked ? "logo-back-hide" : "logo-back-show"}
+          alt="logo-back"
           onClick={Clicked}
         />
         <img src={logo} id="logo-signup" alt="logo" />
         <div className="text-signup-page">
-          <text id={isClicked ? "hey-have-we-met" : "hey-have-we-met-2"}>
-            <span>
+          <text id={isClicked ? "hey-have-we-met" : "hey-have-we-met-hide"}>
               Hey,<br></br>have we met?
-            </span>
+          </text>
+          <text style={{display:"none"}} id={isClicked ? "hey-have-we-met-hide" : "signup-with-email"}  >
+              Sign up<br></br>with e-mail
           </text>
           <text
             id={isClicked ? "signup-to-start" : "signup-to-start-no-display"}
@@ -39,6 +39,7 @@ export default function SignupORloginPage() {
             }
             onClick={() => {
               Clicked();
+              notClicked();
             }}
           >
             <text id="signup-text">Sign up</text>
