@@ -25,7 +25,7 @@ export default function SignupORloginPage() {
           <text id={isClicked ? "hey-have-we-met" : "hey-have-we-met-hide"}>
               Hey,<br></br>have we met?
           </text>
-          <text style={{display:"none"}} id={isClicked ? "hey-have-we-met-hide" : "signup-with-email"}  >
+          <text id={!isClicked ? "signup-with-email" : "hey-have-we-met-hide"}  >
               Sign up<br></br>with e-mail
           </text>
           <text

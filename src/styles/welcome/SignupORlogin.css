@@ -125,9 +125,10 @@
   -ms-animation: fadeOut 800ms;
   opacity: 0;
   visibility: hidden;
+  display: none;
 }
 
-#sign-up-with-email{
+#signup-with-email{
   display: flex;
   max-width: 242px;
   max-height: 88px;
@@ -137,7 +138,12 @@
   font-size: 36px;
   line-height: 44px;
   color: var(--background2);
-  left: 13vw;
+  left: 13vh;
+  animation: fadeIn 8s;
+  -webkit-animation: fadeIn 800ms;
+  -moz-animation: fadeIn 800ms;
+  -o-animation: fadeIn 800ms;
+  -ms-animation: fadeIn 800ms;
 }
 
 #signup-to-start-no-display {
