@@ -206,7 +206,7 @@
   gap: 10px;
   width: 223px;
   max-height: 61px;
-  margin-top: 26vh;
+  margin-top: 23vh;
   border: 2px solid #ffffff;
   border-radius: 70px;
   background-color: var(--background1);
@@ -259,7 +259,7 @@
   flex-direction: column;
   align-items: center;
   align-self: center;
-  top: 54vh;
+  top: 48vh;
   animation: fadeIn 8s;
   -webkit-animation: fadeIn 800ms;
   -moz-animation: fadeIn 800ms;
@@ -272,6 +272,14 @@
 
 .signup-form input {
   text-align: center;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: var(--background2);
+  background-color: transparent;
+  width: 73vw;
+  color: white;
+  line-height: 4vh;
+
 }
 
 .signup-form input::placeholder {
@@ -279,8 +287,41 @@
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
-  line-height: 18px;
+  line-height: 18.15px;
   text-align: center;
   color: #ffabab;
   letter-spacing: 0em;
+}
+
+.socials-signup-hide {
+  animation: fadeOut 8s;
+  -webkit-animation: fadeOut 800ms;
+  -moz-animation: fadeOut 800ms;
+  -o-animation: fadeOut 800ms;
+  -ms-animation: fadeOut 800ms;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
+.socials-signup-container {
+  text-align: center;
+}
+
+#signup-using-socials {
+  font-family: var(--inter-font);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #FFABAB;
+}
+
+.socials-logos{
+  display: flex;
+  margin-top: 2vh;
+  justify-content: center;
+  align-items: center;
+  gap: 10vw;
 }

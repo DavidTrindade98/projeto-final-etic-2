@@ -1,8 +1,13 @@
+import { useState } from "react";
 import "../../styles/welcome/SignupORlogin.css";
 import "../../styles/App.css";
 import logo from "../../assets/logo.svg";
-import { useState } from "react";
 import back from "../../assets/back.svg";
+import facebook from "../../assets/facebook.svg";
+import google from "../../assets/google.svg";
+import apple from "../../assets/apple.svg"
+
+
 
 export default function SignupORloginPage() {
   const [isClicked, notClicked] = useState(true);
@@ -46,7 +51,7 @@ export default function SignupORloginPage() {
             onClick={() => {
               Clicked();
               notClicked();
-            }}
+            }} 
 
           >
             <text id="signup-text">Sign up</text>
@@ -58,6 +63,14 @@ export default function SignupORloginPage() {
           >
             Log in
           </text>
+          <div className= {isClicked ? "socials-signup-hide" : "socials-signup-container"} >
+            <text id="signup-using-socials">or sign up using:</text><br></br>
+            <div className="socials-logos">
+            <img src={facebook} alt="facebook" />
+            <img src={google} alt="google" />
+            <img src={apple} alt="apple" />
+            </div>
+          </div>
         </div>
       </div>
     </default-screen>
