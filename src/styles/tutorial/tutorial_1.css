@@ -1,0 +1,14 @@
+@import "../App.css";
+
+#hi_tutorial_text {
+  display: flex;
+  justify-content: center;
+  font-family: var(--inter-font);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+  margin-top: 5vh;
+}

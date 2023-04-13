@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
 :root {
   --background1: linear-gradient(
     180deg,
@@ -24,6 +26,12 @@ default-screen {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+#logo_small{
+  display: flex;
+  margin-left: 75.2vw;
+  margin-top: 4vh;
 }
 
 /*fadeOut Elements Effect*/
