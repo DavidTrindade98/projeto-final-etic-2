@@ -1,8 +1,8 @@
-import "../../styles/tutorial/tutorial_1.css";
+import "../../styles/tutorial/tutorial_swiper.css";
 import LogoSmall from "../../components/LogoSmall.js";
 import People from "../../assets/people.svg";
 
-export default function TutorialOne() {
+export default function TutorialSwiper() {
   return (
     <default-screen>
         <LogoSmall />
@@ -19,6 +19,7 @@ export default function TutorialOne() {
           and see. No tourist cliché!
         </p>
         </div>
+        
       </div>
     </default-screen>
   );
