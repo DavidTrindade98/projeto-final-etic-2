@@ -1,5 +1,12 @@
 @import "../App.css";
 
+.tutorialOne {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
 #hi_tutorial_text {
   display: flex;
   justify-content: center;
@@ -11,4 +18,33 @@
   text-align: left;
   color: white;
   margin-top: 5vh;
+}
+
+#people_icon {
+  display: flex;
+  margin-left: 39.2vw;
+  margin-top: 3.58vh;
+  max-width: 21.3vw;
+  max-height: 6.82vh;
+}
+
+.hi_tutorial_text_2_container{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  max-width: 76.5vw;
+  max-height: 14.4vh;
+  margin-top: 3.58vh;
+  margin-right: 10.1vw;
+  margin-left: 13.3vw;
+}
+
+#hi_tutorial_text_2{
+  font-family: var(--inter-font);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  color:#FFABAB;
 }
