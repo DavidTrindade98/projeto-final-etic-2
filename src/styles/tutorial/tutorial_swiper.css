@@ -1,6 +1,17 @@
 @import "../App.css";
 
+.TutorialSwiper{
+  background: var(--background1);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .swiper {
+  position: absolute;
   width: 100%;
   height: 100%;
   top: 50%;
@@ -8,39 +19,55 @@
   transform: translate(-50%, -50%);
 }
 
+
 .swiper-slide {
-  font-size: 60px;
   height: 100%;
   width: 100%;
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
 }
 
-.swiper-slide img{
+.swiper-slide img {
   display: block;
 }
 
-.swiper-pagination{
-  margin-bottom: 10vh;
+.swiper-pagination {
+  margin-bottom: 28vh;
 }
 
-.swiper-button-next{
-  display: hidden;
+span.swiper-pagination-bullet {
+  background: white;
 }
 
+.swiper-pagination-bullet swiper-pagination-bullet-active {
+  background: rgba(255, 255, 255, 0.3);
+}
 
+.swipper_back_button {
+  position: absolute;
+  cursor: pointer;
+  width: 11px;
+  height: 23px;
+  left: 9.86vw;
+  top: 4.87vh;
+  animation: fadeIn 8s;
+}
 
+.swiper-button-prev {
+  visibility: hidden;
+}
+
+.swiper-button-next {
+  visibility: hidden;
+}
+
+#skip_the_tutorial {
+  background: #ffabab;
+  font-family: var(--inter-font);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: center;
+}
 
 /* Page 1*/
 
@@ -52,12 +79,10 @@
 }
 
 .tutorial_swiper .tutorial {
-  width: 100%;
-  height: 100%;
- 
+  display: flex;
 }
 
-#hi_tutorial_text {
+#tutorial_text {
   display: flex;
   justify-content: center;
   font-family: var(--inter-font);
@@ -67,10 +92,11 @@
   letter-spacing: 0em;
   text-align: left;
   color: white;
-  margin-top: 5vh;
+  margin-top: 2vh;
+
 }
 
-#people_icon {
+#tutorial_middle_icon {
   display: flex;
   margin-left: 39.2vw;
   margin-top: 3.58vh;
@@ -78,23 +104,27 @@
   max-height: 6.82vh;
 }
 
-.hi_tutorial_text_2_container{
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  max-width: 76.5vw;
-  max-height: 14.4vh;
-  margin-top: 3.58vh;
-  margin-right: 10.1vw;
-  margin-left: 13.3vw;
-}
 
-#hi_tutorial_text_2{
+
+#tutorial_text_2 {
   font-family: var(--inter-font);
   font-size: 15px;
   font-weight: 400;
   line-height: 18px;
   letter-spacing: 0em;
   text-align: left;
-  color:#FFABAB;
+  color: #ffabab;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  max-width: 76.5vw;
+  max-height: 14.4vh;
+  margin-top: 4.58vh;
+  margin-right: 10.1vw;
+  margin-left: 13.3vw;
+  height: auto;
 }
+
+/* icon */
+
+

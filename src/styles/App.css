@@ -18,6 +18,11 @@ body {
   box-sizing: border-box;
 }
 
+br{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 default-screen {
   background: var(--background1);
   width: 100%;
