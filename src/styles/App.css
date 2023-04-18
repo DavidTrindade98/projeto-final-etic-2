@@ -33,12 +33,6 @@ default-screen {
   transform: translate(-50%, -50%);
 }
 
-#logo_small{
-  display: flex;
-  margin-left: 75.2vw;
-  margin-top: 4vh;
-}
-
 /*fadeOut Elements Effect*/
 
 @keyframes fadeOut {

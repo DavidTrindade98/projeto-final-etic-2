@@ -1,8 +1,49 @@
 @import "../App.css";
 
-.tutorial_last_page{
-    display: grid;
-    background: var(--background1);
-    grid-template-columns: 14vw 72vw 14vw;
-    grid-template-rows: 24vh 20vh 20vh 20vh 16vh;
+.tutorial_last_page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: start;
+  text-align: left;
+  background: var(--background1);
+  min-height: 100%
+}
+
+#done_text {
+  display: flex;
+  justify-content: center;
+  font-family: var(--inter-font);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+  margin-top: 2vh;
+}
+
+#let_us_ask {
+  display: flex;
+  justify-content: center;
+  font-family: var(--inter-font);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+  margin-top: 2vh;
+}
+
+#you_can_edit {
+  display: flex;
+  justify-content: center;
+  color: #FFABAB;
+  font-family: var(--inter-font);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
 }

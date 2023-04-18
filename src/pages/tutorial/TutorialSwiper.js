@@ -17,7 +17,6 @@ import "swiper/css/scrollbar";
 export default function TutorialSwiper() {
   return (
     <div className="TutorialSwiper">
-      <div className="swipper_back_button" src={back}></div>
       <LogoSmall />
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -30,6 +29,7 @@ export default function TutorialSwiper() {
         onSlideChange={() => console.log("slide change")}
       >
         <SwiperSlide>
+        <div className="swipper_back_button" src={back} alt="back"></div>
           <div className="tutorial">
             <p id="tutorial_text">
               Hi, Jane!<br></br>Heres a short<br></br>tutorial for you:
@@ -93,13 +93,8 @@ export default function TutorialSwiper() {
             <Button buttonTextHolder="Done" />
           </div>
         </SwiperSlide>
-        <div className="skip_the_tutorial">
-        <p id="skip_the_tutorial_text">Skip the tutorial</p>
-      </div>
       </Swiper>
-      <div className="skip_the_tutorial">
-        <p id="skip_the_tutorial_text">Skip the tutorial</p>
-      </div>
+      <p id="skip_the_tutorial_text">Skip the tutorial</p>
     </div>
   );
 }

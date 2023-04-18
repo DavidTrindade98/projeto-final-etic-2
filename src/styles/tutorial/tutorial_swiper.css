@@ -1,27 +1,20 @@
 @import "../App.css";
 
-.TutorialSwiper {
+.TutorialSwiper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   background: var(--background1);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .swiper {
-  position: absolute;
   width: 100%;
   height: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .swiper-slide {
-  height: 100%;
-  width: 100%;
+
 }
 
 .swiper-slide img {
@@ -29,7 +22,8 @@
 }
 
 .swiper-pagination {
-  margin-bottom: 28vh;
+  display: flex;
+  justify-content: center;
 }
 
 span.swiper-pagination-bullet {
@@ -40,13 +34,12 @@ span.swiper-pagination-bullet {
   background: rgba(255, 255, 255, 0.3);
 }
 
-.swiper swiper-initialized swiper-horizontal swiper-backface-hidden{
+.swiper swiper-initialized swiper-horizontal swiper-backface-hidden {
   height: auto;
-
 }
 
 .swipper_back_button {
-  position: absolute;
+  position: flex;
   cursor: pointer;
   width: 11px;
   height: 23px;
@@ -64,6 +57,7 @@ span.swiper-pagination-bullet {
 }
 
 #skip_the_tutorial {
+  display: flex;
   background: #ffabab;
   font-family: var(--inter-font);
   font-size: 15px;
@@ -79,7 +73,6 @@ span.swiper-pagination-bullet {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-direction: column;
 }
 
 .tutorial_swiper .tutorial {
@@ -97,6 +90,7 @@ span.swiper-pagination-bullet {
   text-align: left;
   color: white;
   margin-top: 2vh;
+  
 }
 
 #tutorial_middle_icon {
@@ -126,11 +120,9 @@ span.swiper-pagination-bullet {
   height: auto;
 }
 
-
-.skip_the_tutorial{
+.skip_the_tutorial {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 30vh;
+  align-items: center;
 }
 
 #skip_the_tutorial_text {
@@ -140,6 +132,5 @@ span.swiper-pagination-bullet {
   line-height: 18px;
   letter-spacing: 0em;
   text-align: center;
-  color: #FFABAB;
-
+  color: #ffabab;
 }
