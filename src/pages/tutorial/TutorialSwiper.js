@@ -4,22 +4,26 @@ import People from "../../assets/people.svg";
 import Plane from "../../assets/plane.svg";
 import House from "../../assets/house.svg";
 import Happy from "../../assets/happy.svg";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, Pagination, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import back from "../../assets/back.svg";
 import Button from "../../components/Button";
 
-import "swiper/css";
+import "swiper/css/bundle";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+
 
 export default function TutorialSwiper() {
+
   return (
     <div className="TutorialSwiper">
-      <LogoSmall />
       <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
+      style={{
+        "--swiper-navigation-size": "30px",
+        "--swiper-navigation-color": "white",
+        "--swiper-navigation-top-offset": "7vh",
+      }}
+        modules={[Navigation, Pagination, A11y]}
         spaceBetween={5}
         slidesPerView={1}
         grabCursor={true}
@@ -29,8 +33,7 @@ export default function TutorialSwiper() {
         onSlideChange={() => console.log("slide change")}
       >
         <SwiperSlide>
-        <div className="swipper_back_button" src={back} alt="back"></div>
-          <div className="tutorial">
+        <LogoSmall />
             <p id="tutorial_text">
               Hi, Jane!<br></br>Heres a short<br></br>tutorial for you:
             </p>
@@ -42,9 +45,9 @@ export default function TutorialSwiper() {
               Locals to exchange ideas<br></br> and give tips on what is
               actually worth<br></br> to do and see. No tourist cliché!
             </p>
-          </div>
         </SwiperSlide>
         <SwiperSlide>
+        <LogoSmall />
           <div className="tutorial">
             <p id="tutorial_text">
               <br></br>Who is<br></br>a Traveller?
@@ -60,6 +63,7 @@ export default function TutorialSwiper() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
+        <LogoSmall />
           <div className="tutorial">
             <p id="tutorial_text">
               <br></br>Who is<br></br>a Local?
@@ -76,7 +80,7 @@ export default function TutorialSwiper() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="tutorial">
+        <LogoSmall />
             <p id="tutorial_text">
               <br></br>
               <br></br>Be Both!
@@ -91,10 +95,8 @@ export default function TutorialSwiper() {
               Partners.
             </p>
             <Button buttonTextHolder="Done" />
-          </div>
         </SwiperSlide>
       </Swiper>
-      <p id="skip_the_tutorial_text">Skip the tutorial</p>
     </div>
   );
 }

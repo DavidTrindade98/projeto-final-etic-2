@@ -1,6 +1,7 @@
 @import "../App.css";
 
 #logo_small {
+  position: flex;
   height: 47px;
   width: 70.63999938964844px;
   border-radius: 0px;

@@ -1,29 +1,31 @@
 @import "../App.css";
+@import "../components/button.css";
 
 .TutorialSwiper{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background: var(--background1);
 }
 
 .swiper {
   width: 100%;
-  height: 100%;
+  background: var(--background1);
+  height: 100vh;
+}
+
+.swiper-wrapper{
+  
 }
 
 .swiper-slide {
-
+  display: flex;
 }
 
 .swiper-slide img {
-  display: block;
+
 }
 
 .swiper-pagination {
   display: flex;
   justify-content: center;
+  margin-bottom: 14%;
 }
 
 span.swiper-pagination-bullet {
@@ -38,8 +40,9 @@ span.swiper-pagination-bullet {
   height: auto;
 }
 
-.swipper_back_button {
-  position: flex;
+#swipper_back_button {
+  display: flex;
+  position: absolute;
   cursor: pointer;
   width: 11px;
   height: 23px;
@@ -49,15 +52,25 @@ span.swiper-pagination-bullet {
 }
 
 .swiper-button-prev {
-  visibility: hidden;
+  margin-left: 10%
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+  content: "";
 }
 
 .swiper-button-next {
   visibility: hidden;
 }
 
+.swiper-slide {
+  height: 100%;
+}
+
 #skip_the_tutorial {
-  display: flex;
+  position: absolute;
+  height: 100px;
+  margin-bottom: 200px;
   background: #ffabab;
   font-family: var(--inter-font);
   font-size: 15px;
@@ -67,17 +80,8 @@ span.swiper-pagination-bullet {
   text-align: center;
 }
 
+
 /* Page 1*/
-
-.tutorial {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.tutorial_swiper .tutorial {
-  display: flex;
-}
 
 #tutorial_text {
   display: flex;
@@ -97,8 +101,8 @@ span.swiper-pagination-bullet {
   display: flex;
   margin-left: 39.2vw;
   margin-top: 3.58vh;
-  max-width: 21.3vw;
-  max-height: 6.82vh;
+  width: 21.3vw;
+  height: 6.82vh;
 }
 
 #tutorial_text_2 {
@@ -123,6 +127,7 @@ span.swiper-pagination-bullet {
 .skip_the_tutorial {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 #skip_the_tutorial_text {
