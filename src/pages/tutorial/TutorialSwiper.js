@@ -4,7 +4,7 @@ import People from "../../assets/people.svg";
 import Plane from "../../assets/plane.svg";
 import House from "../../assets/house.svg";
 import Happy from "../../assets/happy.svg";
-import { Navigation, Pagination, A11y } from "swiper";
+import { Navigation, Pagination, A11y} from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Button from "../../components/Button";
 
@@ -12,8 +12,13 @@ import "swiper/css/bundle";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-export default function TutorialSwiper() {
+import SwiperCore, {
+  History
+} from 'swiper/core';
 
+SwiperCore.use([History]);
+
+export default function TutorialSwiper() {
 
   return (
     <div className="TutorialSwiper">
@@ -22,18 +27,21 @@ export default function TutorialSwiper() {
           "--swiper-navigation-size": "30px",
           "--swiper-navigation-color": "white",
           "--swiper-navigation-top-offset": "7vh",
-          "--swiper-pagination-bullet-inactive-opacity":""
         }}
-        modules={[Navigation, Pagination, A11y]}
+        
+        modules={[Navigation, Pagination, A11y,History]}
         spaceBetween={5}
         slidesPerView={1}
         grabCursor={true}
+        history={{
+          key: "slide",
+        }}
         navigation
         pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
       >
-        <SwiperSlide>
+        <SwiperSlide data-history="slide1" key={1}>
           <LogoSmall />
           <p id="tutorial_text">
             Hi, Jane!<br></br>Heres a short<br></br>tutorial for you:
@@ -46,8 +54,8 @@ export default function TutorialSwiper() {
             to exchange ideas<br></br> and give tips on what is actually worth
             <br></br> to do and see. No tourist cliché!
           </p>
-        </SwiperSlide>
-        <SwiperSlide>
+        </SwiperSlide >
+        <SwiperSlide data-history="slide2">
           <LogoSmall />
           <div className="tutorial">
             <p id="tutorial_text">
@@ -63,7 +71,7 @@ export default function TutorialSwiper() {
             </p>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide data-history="slide3">
           <LogoSmall />
           <div className="tutorial">
             <p id="tutorial_text">
@@ -80,7 +88,7 @@ export default function TutorialSwiper() {
             </p>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide data-history="slide4">
           <LogoSmall />
           <p id="tutorial_text">
             <br></br>
@@ -96,7 +104,7 @@ export default function TutorialSwiper() {
           </p>
           <Button buttonTextHolder="Done" buttonOnClick={<></>} />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide data-history="slide5">
         <LogoSmall />
             <p id="tutorial_text"><br></br><br></br>Done!</p>
             <div id="tutorial_text">
