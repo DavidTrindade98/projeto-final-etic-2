@@ -3,7 +3,7 @@
 .button{
   display: flex;
   justify-content: center;
-  padding-top: 4.5vh;
+
 }
 
 #button {
@@ -21,6 +21,9 @@
   cursor: pointer;
   transition-property: margin-top;
   transition-duration: 800ms;
+  margin-top: 4.58vh;
+  margin-right: 10.1vw;
+  margin-left: 13.3vw;
 }
 
 #button-text {

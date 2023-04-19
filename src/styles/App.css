@@ -10,7 +10,10 @@
   );
   --background2: white;
   --inter-font: "Inter", sans-serif;
-  
+
+  --swiper-navigation-size:30px ;
+  --swiper-navigation-color: white;
+  --swiper-navigation-top-offset: 7vh;
 }
 
 body {

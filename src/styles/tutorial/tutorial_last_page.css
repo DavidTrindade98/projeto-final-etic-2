@@ -9,7 +9,6 @@
   background: var(--background1);
   min-height: 100%
 }
-
 #done_text {
   display: flex;
   justify-content: center;
@@ -38,7 +37,6 @@
 
 #you_can_edit {
   display: flex;
-  justify-content: center;
   color: #FFABAB;
   font-family: var(--inter-font);
   font-size: 15px;

@@ -12,17 +12,18 @@ import "swiper/css/bundle";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-
 export default function TutorialSwiper() {
+
 
   return (
     <div className="TutorialSwiper">
       <Swiper
-      style={{
-        "--swiper-navigation-size": "30px",
-        "--swiper-navigation-color": "white",
-        "--swiper-navigation-top-offset": "7vh",
-      }}
+        style={{
+          "--swiper-navigation-size": "30px",
+          "--swiper-navigation-color": "white",
+          "--swiper-navigation-top-offset": "7vh",
+          "--swiper-pagination-bullet-inactive-opacity":""
+        }}
         modules={[Navigation, Pagination, A11y]}
         spaceBetween={5}
         slidesPerView={1}
@@ -33,21 +34,21 @@ export default function TutorialSwiper() {
         onSlideChange={() => console.log("slide change")}
       >
         <SwiperSlide>
-        <LogoSmall />
-            <p id="tutorial_text">
-              Hi, Jane!<br></br>Heres a short<br></br>tutorial for you:
-            </p>
-            <img src={People} alt="icon" id="tutorial_middle_icon"></img>
-            <p id="tutorial_text_2">
-              Dakee was created to give the real,<br></br> non-touristic
-              experience in a visited city.<br></br>
-              <br></br> Based on your interests, we connect Travellers and
-              Locals to exchange ideas<br></br> and give tips on what is
-              actually worth<br></br> to do and see. No tourist cliché!
-            </p>
+          <LogoSmall />
+          <p id="tutorial_text">
+            Hi, Jane!<br></br>Heres a short<br></br>tutorial for you:
+          </p>
+          <img src={People} alt="icon" id="tutorial_middle_icon"></img>
+          <p id="tutorial_text_2">
+            Dakee was created to give the real,<br></br> non-touristic
+            experience in a visited city.<br></br>
+            <br></br> Based on your interests, we connect Travellers and Locals
+            to exchange ideas<br></br> and give tips on what is actually worth
+            <br></br> to do and see. No tourist cliché!
+          </p>
         </SwiperSlide>
         <SwiperSlide>
-        <LogoSmall />
+          <LogoSmall />
           <div className="tutorial">
             <p id="tutorial_text">
               <br></br>Who is<br></br>a Traveller?
@@ -63,7 +64,7 @@ export default function TutorialSwiper() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-        <LogoSmall />
+          <LogoSmall />
           <div className="tutorial">
             <p id="tutorial_text">
               <br></br>Who is<br></br>a Local?
@@ -80,21 +81,29 @@ export default function TutorialSwiper() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
+          <LogoSmall />
+          <p id="tutorial_text">
+            <br></br>
+            <br></br>Be Both!
+          </p>
+          <img src={Happy} alt="icon" id="tutorial_middle_icon"></img>
+          <p id="tutorial_text_2">
+            As a Dakee user, you can choose to be both Traveller and Local.
+            <br></br>
+            <br></br>
+            Gain discounts by giving advices to visitors and get the
+            unforgettable local experience while travelling!
+          </p>
+          <Button buttonTextHolder="Done" buttonOnClick={<></>} />
+        </SwiperSlide>
+        <SwiperSlide>
         <LogoSmall />
-            <p id="tutorial_text">
-              <br></br>
-              <br></br>Be Both!
-            </p>
-            <img src={Happy} alt="icon" id="tutorial_middle_icon"></img>
-            <p id="tutorial_text_2">
-              A Local is a person who lives in a city<br></br> and wants to give
-              some tips to visitors.<br></br>
-              <br></br> He or she recieves later avaliations from<br></br> the
-              Travellers. Each avaliation has a point<br></br> value that can be
-              exchanges for many<br></br> rewards and discounts from our
-              Partners.
-            </p>
-            <Button buttonTextHolder="Done" />
+            <p id="tutorial_text"><br></br><br></br>Done!</p>
+            <div id="tutorial_text">
+              Let us ask five<br></br>quick questions<br></br>before we start.
+              <p id="you_can_edit">You can edit your anwsers later.</p>
+            </div>
+            <Button buttonTextHolder="Ok" />
         </SwiperSlide>
       </Swiper>
     </div>

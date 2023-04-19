@@ -1,7 +1,8 @@
 @import "../App.css";
 @import "../components/button.css";
 
-.TutorialSwiper{
+.TutorialSwiper {
+  display: flex;
 }
 
 .swiper {
@@ -10,34 +11,21 @@
   height: 100vh;
 }
 
-.swiper-wrapper{
-  
+.swiper-wrapper {
 }
 
 .swiper-slide {
   display: flex;
 }
 
-.swiper-slide img {
-
-}
-
 .swiper-pagination {
   display: flex;
   justify-content: center;
-  margin-bottom: 14%;
+  margin-bottom: 20%;
 }
 
 span.swiper-pagination-bullet {
   background: white;
-}
-
-.swiper-pagination-bullet swiper-pagination-bullet-active {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.swiper swiper-initialized swiper-horizontal swiper-backface-hidden {
-  height: auto;
 }
 
 #swipper_back_button {
@@ -52,40 +40,20 @@ span.swiper-pagination-bullet {
 }
 
 .swiper-button-prev {
-  margin-left: 10%
-}
-
-.swiper-button-next::after, .swiper-button-prev::after {
-  content: "";
+  margin-left: 10%;
 }
 
 .swiper-button-next {
   visibility: hidden;
 }
 
-.swiper-slide {
-  height: 100%;
-}
-
-#skip_the_tutorial {
-  position: absolute;
-  height: 100px;
-  margin-bottom: 200px;
-  background: #ffabab;
-  font-family: var(--inter-font);
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: 0em;
-  text-align: center;
-}
-
-
 /* Page 1*/
 
 #tutorial_text {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  margin-right: 10.1vw;
+  margin-left: 13.3vw;
   font-family: var(--inter-font);
   font-size: 36px;
   font-weight: 700;
@@ -93,8 +61,7 @@ span.swiper-pagination-bullet {
   letter-spacing: 0em;
   text-align: left;
   color: white;
-  margin-top: 2vh;
-  
+  margin-top: 3vh;
 }
 
 #tutorial_middle_icon {
@@ -128,6 +95,11 @@ span.swiper-pagination-bullet {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  left: -3.85%;
+  right: -3.85%;
+  top: 91vh;
+  cursor: pointer;
 }
 
 #skip_the_tutorial_text {
@@ -138,4 +110,5 @@ span.swiper-pagination-bullet {
   letter-spacing: 0em;
   text-align: center;
   color: #ffabab;
+  cursor: pointer;
 }
