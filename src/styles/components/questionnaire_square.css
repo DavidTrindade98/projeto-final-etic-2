@@ -2,12 +2,13 @@
 
 .questionnaire_box {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 21px 46px;
-  gap: 16px;
-  border: 2px solid #ffffff;
+  justify-content: center;
+  flex-direction: column;
+  gap: 13px;
+  height: 135px;
+  width: 135px;
+  border: 2px solid #fff;
   border-radius: 20px;
 }
 

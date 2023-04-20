@@ -16,9 +16,7 @@
 }
 
 .questionnaire_one_middle_container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  
 }
 
 .questionnaire_one_middle_container_text_container{
@@ -57,9 +55,17 @@
 
 .questionnaire_one_options_container {
   display: grid;
-  justify-content: center;
-  align-self: center;
-  grid-template-columns: 20vh 20vh;
+  align-items: center;
+  grid-template-columns: auto auto;
   border-radius: 20px;
   grid-gap: 5vw;
+  justify-content: center;
+}
+
+.questionnaire_one_item_one{
+  
+}
+
+.questionnaire_one_item_two{
+  
 }
