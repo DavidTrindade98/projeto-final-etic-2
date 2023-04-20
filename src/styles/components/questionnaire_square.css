@@ -1,0 +1,30 @@
+@import "../App.css";
+
+.questionnaire_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 21px 46px;
+  gap: 16px;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+}
+
+#questionnaire_box_image {
+  height: 40px;
+  width: 40px;
+  left: 47px;
+  top: 29.5px;
+  border-radius: 0px;
+}
+
+#questionnaire_box_text {
+  font-family: var(--inter-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #ffffff;
+}

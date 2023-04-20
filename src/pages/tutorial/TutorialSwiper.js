@@ -57,7 +57,7 @@ export default function TutorialSwiper() {
             <p
               id="skip_the_tutorial_text"
               onClick={() => {
-                navigate("/TutorialSwiper/4");
+                navigate("/TutorialSwiper/5");
                 refreshPage();
               }}
             >
@@ -83,7 +83,7 @@ export default function TutorialSwiper() {
               <p
                 id="skip_the_tutorial_text"
                 onClick={() => {
-                  navigate("/TutorialSwiper/4");
+                  navigate("/TutorialSwiper/5");
                   refreshPage();
                 }}
               >
@@ -111,7 +111,7 @@ export default function TutorialSwiper() {
               <p
                 id="skip_the_tutorial_text"
                 onClick={() => {
-                  navigate("/TutorialSwiper/4");
+                  navigate("/TutorialSwiper/5");
                   refreshPage();
                 }}
               >
@@ -144,7 +144,10 @@ export default function TutorialSwiper() {
           </p>
           <div id="tutorial_text">
             Let us ask five<br></br>quick questions<br></br>before we start.
-            <p id="you_can_edit">You can edit your anwsers later.<br></br><br></br></p>
+            <p id="you_can_edit">
+              You can edit your anwsers later.<br></br>
+              <br></br>
+            </p>
           </div>
           <Button buttonTextHolder="Ok" />
         </SwiperSlide>

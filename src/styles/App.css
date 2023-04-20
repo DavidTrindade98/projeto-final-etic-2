@@ -13,7 +13,7 @@
 
   --swiper-navigation-size:30px ;
   --swiper-navigation-color: white;
-  --swiper-navigation-top-offset: 7vh;
+  --swiper-navigation-top-offset: 6vh;
 }
 
 body {
@@ -35,6 +35,13 @@ default-screen {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.top_container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 40vw;
 }
 
 /*fadeOut Elements Effect*/
