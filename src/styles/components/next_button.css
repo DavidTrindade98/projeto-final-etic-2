@@ -1,0 +1,20 @@
+@import "../App.css";
+
+.next {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 5vh;
+    transition-property: margin-top;
+    transition-duration: 800ms;
+  }
+  
+  #next_text {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #ffabab;
+  }

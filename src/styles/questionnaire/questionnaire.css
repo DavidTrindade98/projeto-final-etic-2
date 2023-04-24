@@ -1,13 +1,13 @@
 @import "../App.css";
 
-.questionnaire_one_container {
+.questionnaire_container {
   display: flex;
   flex-direction: column;
   background: var(--background1);
   height: 100vh;
 }
 
-.questionnaire_one_top_container {
+.questionnaire_top_container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -15,45 +15,40 @@
   height: 16vh;
 }
 
-.questionnaire_one_middle_container {
-  
+.questionnaire_middle_container {
+  display: grid;
+  justify-content: center;
+  margin-top: 8vh;
 }
 
-.questionnaire_one_middle_container_text_container{
+.questionnaire_middle_container_text_container {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  margin-left: 14vw;
 }
 
-#questionnaire_one_index_text {
+#questionnaire_index_text {
   width: 55px;
-  height: 44px;
+  height: 30px;
   font-family: var(--inter-font);
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
   line-height: 44px;
+  color: var(--background2);
+}
+
+#questionnaire_question {
+  font-family: var(--inter-font);
+  font-size: 16px;
+  width: 55px;
+  height: 30px;
+  font-weight: 700;
+  line-height: 19px;
+  text-align: left;
   color: #ffffff;
 }
 
-#questionnaire_one_question {
-  height: 19px;
-  width: 50px;
-  left: 50px;
-  top: 297px;
-  border-radius: nullpx;
-  font-family: Inter;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 19px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #FFFFFF;
-
-}
-
-.questionnaire_one_options_container {
+.questionnaire_options_container {
   display: grid;
   align-items: center;
   grid-template-columns: auto auto;
@@ -62,10 +57,7 @@
   justify-content: center;
 }
 
-.questionnaire_one_item_one{
-  
+.questionnaire_option {
+  display: flex;
 }
 
-.questionnaire_one_item_two{
-  
-}
