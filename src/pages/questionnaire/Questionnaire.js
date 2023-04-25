@@ -6,12 +6,12 @@ import House from "../../assets/house.svg";
 import BackButton from "../../components/BackButton";
 import NextButton from "../../components/NextButton";
 
-export default function Questionnaire({back_button_click,index_text, question_text,questionnaireBoxImage,questionnaireBoxText}) {
+export default function Questionnaire({index_text, question_text,questionnaireBoxImage,questionnaireBoxText}) {
 
   return (
     <div className="questionnaire_container">
         <div className="questionnaire_top_container">
-          <BackButton onClick={back_button_click}/>
+          <BackButton />
           <LogoSmall2 />
         </div>
         <div className="questionnaire_middle_container">
