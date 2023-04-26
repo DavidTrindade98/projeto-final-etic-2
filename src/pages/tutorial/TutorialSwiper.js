@@ -149,7 +149,9 @@ export default function TutorialSwiper() {
               <br></br>
             </p>
           </div>
-          <Button buttonTextHolder="Ok" />
+          <Button buttonTextHolder="Ok" buttonOnClick={() => {
+                  navigate("/Questionnaire1/");
+                }} />
         </SwiperSlide>
       </Swiper>
     </div>

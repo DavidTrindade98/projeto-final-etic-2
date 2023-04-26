@@ -1,0 +1,8 @@
+#back_button_questionnaire1{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 30px;
+    height: 30px;
+    
+}

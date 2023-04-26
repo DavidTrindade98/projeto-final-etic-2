@@ -52,7 +52,7 @@
 
 .tap-anywhere text {
   text-align: center;
-  font-family: "Inter", sans-serif;
+  font-family: var(--inter-font);
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
