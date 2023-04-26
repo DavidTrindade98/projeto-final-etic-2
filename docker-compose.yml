@@ -1,0 +1,31 @@
+version: '3'
+services:
+    frontend:
+      build: ./frontend
+      ports:
+      - '3000:3000'
+    backend:
+      build: ./backend
+      ports:
+        - '8000:8000'
+      depends_on:
+        db:
+          condition: service_healthy
+
+    db:
+      image: mysql
+      command: --default-authentication-plugin=mysql_native_password
+      ports:
+        - 3307:3306
+      environment:
+        MYSQL_DATABASE: dankee_app_db
+        MYSQL_ROOT_PASSWORD: admin
+      healthcheck:
+            test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+            timeout: 20s
+            retries: 10
+
+    adminer:
+      image: adminer
+      ports:
+        - 8080:8080
