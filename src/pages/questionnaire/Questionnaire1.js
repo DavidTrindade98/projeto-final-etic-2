@@ -1,4 +1,3 @@
-import "../../styles/questionnaire/questionnaire1.css";
 import LogoSmall2 from "../../components/LogoSmall2";
 import QuestionnaireSquare from "../../components/QuestionnaireSquare";
 import Plane from "../../assets/plane.svg";

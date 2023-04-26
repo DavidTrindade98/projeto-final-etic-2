@@ -1,0 +1,23 @@
+@import "../App.css";
+
+.questionnaire_middle_container_text_container input::placeholder {
+  font-family: var(--inter-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18.15px;
+  text-align: center;
+  color: #ffabab;
+  letter-spacing: 0em;
+}
+
+#city_or_country {
+  text-align: center;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: var(--background2);
+  background-color: transparent;
+  width: 73vw;
+  color: white;
+  line-height: 4vh;
+}

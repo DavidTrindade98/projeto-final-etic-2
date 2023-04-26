@@ -1,8 +1,6 @@
 import "../../styles/questionnaire/questionnaire.css";
 import LogoSmall2 from "../../components/LogoSmall2";
 import QuestionnaireSquare from "../../components/QuestionnaireSquare";
-import Plane from "../../assets/plane.svg";
-import House from "../../assets/house.svg";
 import BackButton from "../../components/BackButton";
 import NextButton from "../../components/NextButton";
 
@@ -22,14 +20,10 @@ export default function Questionnaire({index_text, question_text,questionnaireBo
           <div className="questionnaire_options_container">
             <div className="questionnaire_option">
               <QuestionnaireSquare
-                questionnaireBoxImage={Plane}
-                questionnaireBoxText={"Traveller"}
               />
             </div>
             <div className="questionnaire_option">
               <QuestionnaireSquare
-                questionnaireBoxImage={House}
-                questionnaireBoxText={"Local"}
               />
             </div>
           </div>
