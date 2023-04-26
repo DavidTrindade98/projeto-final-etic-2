@@ -40,11 +40,27 @@ span.swiper-pagination-bullet {
 }
 
 .swiper-button-prev {
-  margin-left: 10%;
+  margin-left: 8.5%;
+  background-image: url(../../assets/back.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 29.5px;
+  background-position: center;
+  color: transparent;
 }
 
 .swiper-button-next {
   visibility: hidden;
+}
+
+span {
+  position:absolute;
+  align-items: center;
+  gap: 30vw;
+  height: 16vh;
+}
+
+.container-start{
+  
 }
 
 /* Page 1*/
@@ -61,7 +77,7 @@ span.swiper-pagination-bullet {
   letter-spacing: 0em;
   text-align: left;
   color: white;
-  margin-top: 3vh;
+  margin-top: 15vh;
 }
 
 #tutorial_middle_icon {
@@ -92,15 +108,11 @@ span.swiper-pagination-bullet {
 }
 
 .skip_the_tutorial {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: absolute;
   left: -3.85%;
   right: -3.85%;
   top: 91vh;
   cursor: pointer;
-  
 }
 
 #skip_the_tutorial_text {
@@ -116,7 +128,7 @@ span.swiper-pagination-bullet {
 
 #you_can_edit {
   display: flex;
-  color: #FFABAB;
+  color: #ffabab;
   font-family: var(--inter-font);
   font-size: 15px;
   font-weight: 400;

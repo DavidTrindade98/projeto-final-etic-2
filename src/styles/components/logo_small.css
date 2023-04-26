@@ -1,10 +1,9 @@
 @import "../App.css";
 
 #logo_small {
-  position: flex;
+  margin-left: 70vw;
+  margin-top: 4.5vh;
   height: 47px;
   width: 70.63999938964844px;
   border-radius: 0px;
-  margin-left: 75.2vw;
-  margin-top: 4vh;
 }

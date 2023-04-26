@@ -24,9 +24,9 @@ export default function TutorialSwiper() {
     <div className="TutorialSwiper">
       <Swiper
         style={{
-          "--swiper-navigation-size": "30px",
-          "--swiper-navigation-color": "white",
-          "--swiper-navigation-top-offset": "7vh",
+          "--swiper-navigation-size": "",
+          "--swiper-navigation-color": "transparent",
+          "--swiper-navigation-top-offset": "8vh",
         }}
         modules={[Navigation, Pagination, A11y, History]}
         spaceBetween={5}
@@ -41,7 +41,13 @@ export default function TutorialSwiper() {
         onSlideChange={() => console.log("slide change")}
       >
         <SwiperSlide data-history="1" key={1}>
-          <LogoSmall />
+          <div
+            className="swiper-button-prev"
+            style={{ visibility: "hidden", background: "url()" }}
+          >
+            yoo
+          </div>
+
           <p id="tutorial_text">
             Hi, Jane!<br></br>Heres a short<br></br>tutorial for you:
           </p>
@@ -66,7 +72,6 @@ export default function TutorialSwiper() {
           </div>
         </SwiperSlide>
         <SwiperSlide data-history="2">
-          <LogoSmall />
           <div className="tutorial">
             <p id="tutorial_text">
               <br></br>Who is<br></br>a Traveller?
@@ -93,7 +98,6 @@ export default function TutorialSwiper() {
           </div>
         </SwiperSlide>
         <SwiperSlide data-history="3">
-          <LogoSmall />
           <div className="tutorial">
             <p id="tutorial_text">
               <br></br>Who is<br></br>a Local?
@@ -121,7 +125,6 @@ export default function TutorialSwiper() {
           </div>
         </SwiperSlide>
         <SwiperSlide data-history="4">
-          <LogoSmall />
           <p id="tutorial_text">
             <br></br>
             <br></br>Be Both!
@@ -137,22 +140,22 @@ export default function TutorialSwiper() {
           <Button buttonTextHolder="Done" buttonOnClick={<></>} />
         </SwiperSlide>
         <SwiperSlide data-history="5">
-          <LogoSmall />
           <p id="tutorial_text">
             <br></br>
-            <br></br>Done!
+            Done!
           </p>
           <div id="tutorial_text">
             Let us ask five<br></br>quick questions<br></br>before we start.
-            <p id="you_can_edit">
-              You can edit your anwsers later.<br></br>
-              <br></br>
-            </p>
+            <p id="you_can_edit">You can edit your anwsers later.</p>
           </div>
-          <Button buttonTextHolder="Ok" buttonOnClick={() => {
-                  navigate("/Questionnaire1/");
-                }} />
+          <Button
+            buttonTextHolder="Ok"
+            buttonOnClick={() => {
+              navigate("/Questionnaire1/");
+            }}
+          />
         </SwiperSlide>
+        <span slot="container-start">{<LogoSmall />}</span>
       </Swiper>
     </div>
   );
