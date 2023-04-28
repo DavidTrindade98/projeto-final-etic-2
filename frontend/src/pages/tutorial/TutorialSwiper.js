@@ -43,9 +43,7 @@ export default function TutorialSwiper() {
         <SwiperSlide data-history="1" key={1}>
           <div
             className="swiper-button-prev"
-            style={{ visibility: "hidden", background: "url()" }}
           >
-            yoo
           </div>
 
           <p id="tutorial_text">

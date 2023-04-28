@@ -18,7 +18,6 @@
 .questionnaire_middle_container {
   display: grid;
   justify-content: center;
-  
 }
 
 .questionnaire_middle_container_text_container {
@@ -27,8 +26,6 @@
 }
 
 #questionnaire_index_text {
-  width: 55px;
-  height: 30px;
   font-family: var(--inter-font);
   font-style: normal;
   font-weight: 700;

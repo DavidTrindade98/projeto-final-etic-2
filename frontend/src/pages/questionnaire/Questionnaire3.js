@@ -1,17 +1,12 @@
 import "../../styles/questionnaire/questionnaire.css";
+import "../../styles/questionnaire/questionnaire4.css";
 import LogoSmall2 from "../../components/LogoSmall2";
-import QuestionnaireSquare from "../../components/QuestionnaireSquare";
 import BackButton from "../../components/BackButton";
 import NextButton from "../../components/NextButton";
-import Female from "../../assets/female.svg";
-import Male from "../../assets/male.svg";
-import Horse from "../../assets/Vector.svg";
-import VectorX from "../../assets/VectorX.svg";
 import { useNavigate } from "react-router-dom";
 
 export default function Questionnaire3() {
-
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <div className="questionnaire_container">
@@ -21,36 +16,19 @@ export default function Questionnaire3() {
         </div>
         <div className="questionnaire_middle_container">
           <div className="questionnaire_middle_container_text_container">
-            <p id="questionnaire_index_text">{"3/5"}</p>
-            <p id="questionnaire_question">{"Gender:"}</p>
+            <p id="questionnaire_index_text">{"3/4"}</p>
+            <p id="questionnaire_question">{"I currently live in:"}</p>
+            <br></br>
+            <input id="city_or_country" type="text" placeholder="City, Country"></input>
+            <br></br>
+            <br></br>
+            <br></br>
+            <p id="questionnaire_question">{"I can give advices for:"}</p>
+            <br></br>
+            <input id="city_or_country" type="text" placeholder="City, Country"></input>
           </div>
-          <div className="questionnaire_options_container">
-            <div className="questionnaire_option">
-              <QuestionnaireSquare
-                questionnaireBoxImage={Female}
-                questionnaireBoxText={"Female"}
-              />
-            </div>
-            <div className="questionnaire_option">
-              <QuestionnaireSquare
-                questionnaireBoxImage={Male}
-                questionnaireBoxText={"Male"}
-              />
-            </div>
-            <div className="questionnaire_option">
-              <QuestionnaireSquare
-                questionnaireBoxImage={Horse}
-                questionnaireBoxText={"Complex"}
-              />
-            </div>
-            <div className="questionnaire_option">
-              <QuestionnaireSquare
-                questionnaireBoxImage={VectorX}
-                questionnaireBoxText={"Prefer not to say"}
-              />
-            </div>
-          </div>
-          <NextButton NextOnClick={() => {
+          
+        <NextButton NextOnClick={() => {
             navigate("/Questionnaire4/");
           }}/>
         </div>

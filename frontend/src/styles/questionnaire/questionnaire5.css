@@ -1,0 +1,7 @@
+.questionnaire_middle_container5 {
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-content:center;
+    margin-top: 18vh;
+    border-radius: 20px;
+}
