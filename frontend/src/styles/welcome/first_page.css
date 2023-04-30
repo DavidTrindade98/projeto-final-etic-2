@@ -1,0 +1,49 @@
+@import "../App.css";
+
+.first-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--background1);
+  height: 100vh;
+  cursor: pointer;
+}
+
+.logo-slogan {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#logo {
+  width: 202px;
+  height: 47px;
+}
+
+.logo-slogan p {
+  font-family: var(--inter-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.tap-anywhere {
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.tap-anywhere p {
+  text-align: center;
+  font-family: var(--inter-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffbaba;
+}

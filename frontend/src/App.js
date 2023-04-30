@@ -3,6 +3,7 @@ import { Routes, Route} from 'react-router-dom';
  
 import FirstPage from './pages/welcome/FirstPage';
 import SignupORlogin from './pages/welcome/SignupORlogin';
+import LoginPage from './pages/login/LoginPage';
 import TutorialSwiper from './pages/tutorial/TutorialSwiper';
 import Questionnaire1 from './pages/questionnaire/Questionnaire1';
 import Questionnaire2 from './pages/questionnaire/Questionnaire2';
@@ -11,11 +12,14 @@ import Questionnaire4 from './pages/questionnaire/Questionnaire4';
 import Questionnaire5 from './pages/questionnaire/Questionnaire5';
 
 
+
+
 function App() {
   return (
     <Routes>
         <Route path="/" element={<FirstPage />} />
         <Route path="/SignupORlogin" element={<SignupORlogin />} />
+        <Route path="Login" element={<LoginPage />} />
         <Route path="/TutorialSwiper" element={<TutorialSwiper/>}>
           <Route path="/TutorialSwiper/1" element={<TutorialSwiper/>} />
           <Route path="/TutorialSwiper/2" element={<TutorialSwiper/>} />

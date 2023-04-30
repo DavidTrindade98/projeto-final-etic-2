@@ -260,7 +260,7 @@
   flex-direction: column;
   align-items: center;
   align-self: center;
-  top: 48vh;
+  top: 48.5vh;
   animation: fadeIn 8s;
   -webkit-animation: fadeIn 800ms;
   -moz-animation: fadeIn 800ms;
@@ -280,6 +280,10 @@
   width: 73vw;
   color: white;
   line-height: 4vh;
+  font-family: var(--inter-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
 
 }
 

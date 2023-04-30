@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../../styles/welcome/SignupORlogin.css";
+import "../../styles/welcome/signup_or_login.css";
 import "../../styles/App.css";
 import logo from "../../assets/logo.svg";
 import back from "../../assets/back.svg";
@@ -47,10 +47,8 @@ export default function SignupORloginPage() {
             className={
               isClicked ? "signup-button-overlay" : "signup-button-overlay-2"
             }
-      
             onClick={() => {
               Clicked();
-              notClicked();
             }} 
 
           >
