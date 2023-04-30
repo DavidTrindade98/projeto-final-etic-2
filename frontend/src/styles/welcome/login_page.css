@@ -1,24 +1,23 @@
 @import "../App.css";
 
-.login-page{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.login-page {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 2vh;
-  height: 15vh;
+  height: 8vh;
 }
 
-.title-container {
+.text-container {
   display: flex;
 }
 
-#login_text {
+#title_text {
   display: flex;
   font-family: var(--inter-font);
   font-style: normal;
@@ -27,19 +26,19 @@
   color: var(--background2);
   animation: fadeIn 8s;
   -webkit-animation: fadeIn 800ms;
+  margin-top: 5vh;
 }
 
 .form-container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 4vh;
-  gap: 2px;
+  gap: 4vh;
+  animation: fadeIn 8s;
+  -webkit-animation: fadeIn 800ms;
 }
 
 .socials-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  flex-direction: column;
 }
 
 #text-using-socials {

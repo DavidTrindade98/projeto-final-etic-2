@@ -1,49 +1,41 @@
 @import "../App.css";
 
-.SignupORloginPage {
+.signup-or-login-page {
   display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
-#logo-signup {
-  position: absolute;
-  width: 198px;
-  height: 47px;
-  top: 17vh;
-}
-
-.text-signup-page {
+#title_text {
   display: flex;
-  flex-direction: column;
-  margin-top: 33vh;
-}
-
-#hey-have-we-met {
-  display: flex;
-  max-width: 242px;
-  max-height: 88px;
   font-family: var(--inter-font);
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
-  line-height: 44px;
   color: var(--background2);
-  left: 13vh;
   animation: fadeIn 8s;
   -webkit-animation: fadeIn 800ms;
-  -moz-animation: fadeIn 800ms;
-  -o-animation: fadeIn 800ms;
-  -ms-animation: fadeIn 800ms;
+}
+
+#title_text_hide {
+  display: flex;
+  font-family: var(--inter-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--background2);
+  animation: fadeIn 8s;
+  -webkit-animation: fadeIn 800ms;
 }
 
 #signup-to-start {
   display: flex;
-  max-width: 290px;
-  max-height: 18px;
-  left: 13vh;
-  margin-top: 2vh;
   font-family: var(--inter-font);
   font-style: normal;
   font-weight: 400;
@@ -57,41 +49,40 @@
   -ms-animation: fadeIn 800ms;
 }
 
-.signup-button-overlay {
+.signup-button-show {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   align-self: center;
   padding: 21px 82px;
-  gap: 10px;
   width: 223px;
-  max-height: 61vh;
-  margin-top: 6vh;
   border: 2px solid #ffffff;
   border-radius: 70px;
   background-color: var(--background1);
   cursor: pointer;
   transition-property: margin-top;
   transition-duration: 800ms;
+  height: 61px;
+  width: 225px;
 }
 
-#signup-text {
+#signup_text {
   display: flex;
   text-align: center;
   font-family: var(--inter-font);
   color: var(--background2);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
 }
 
 #login-text-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-  width: 44px;
-  height: 18px;
-  margin-top: 2.8vh;
   font-family: var(--inter-font);
   font-style: normal;
   font-weight: 400;
@@ -113,7 +104,7 @@
   width: 11px;
   height: 23px;
   left: 9.86vw;
-  top: 4.87vh;
+  top: 6vh;
   animation: fadeOut 8s;
   -webkit-animation: fadeOut 800ms;
   -moz-animation: fadeOut 800ms;
@@ -138,16 +129,6 @@
 }
 
 #hey-have-we-met-hide {
-  display: flex;
-  max-width: 242px;
-  max-height: 88px;
-  font-family: var(--inter-font);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 44px;
-  color: var(--background2);
-  left: 13vw;
   animation: fadeOut 8s;
   -webkit-animation: fadeOut 800ms;
   -moz-animation: fadeOut 800ms;
@@ -156,24 +137,6 @@
   opacity: 0;
   visibility: hidden;
   display: none;
-}
-
-#signup-with-email {
-  display: flex;
-  max-width: 242px;
-  max-height: 88px;
-  font-family: var(--inter-font);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 44px;
-  color: var(--background2);
-  left: 13vh;
-  animation: fadeIn 8s;
-  -webkit-animation: fadeIn 800ms;
-  -moz-animation: fadeIn 800ms;
-  -o-animation: fadeIn 800ms;
-  -ms-animation: fadeIn 800ms;
 }
 
 #signup-to-start-no-display {
@@ -195,25 +158,25 @@
   -ms-animation: fadeOut 800ms;
   opacity: 0;
   visibility: hidden;
+  display: none;
 }
 
-.signup-button-overlay-2 {
+.signup-button-hide {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-self: center;
   padding: 21px 82px;
-  gap: 10px;
   width: 223px;
-  max-height: 61px;
-  margin-top: 23vh;
   border: 2px solid #ffffff;
   border-radius: 70px;
   background-color: var(--background1);
   cursor: pointer;
   transition-property: margin-top;
   transition-duration: 800ms;
+  height: 61px;
+  width: 225px;
 }
 
 #login-text-button-no-display {
@@ -224,10 +187,9 @@
   align-self: center;
   width: 44px;
   height: 18px;
-  margin-top: 2.8vh;
   font-family: var(--inter-font);
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 15px;
   line-height: 18px;
   text-align: center;
@@ -239,11 +201,12 @@
   -ms-animation: fadeOut 800ms;
   opacity: 0;
   visibility: hidden;
+  display: none;
 }
 
 /* DOM Manipulation Create Form*/
 
-.signup-form-hide {
+.form-container-hide {
   animation: fadeOut 8s;
   -webkit-animation: fadeOut 800ms;
   -moz-animation: fadeOut 800ms;
@@ -252,23 +215,6 @@
   opacity: 0;
   visibility: hidden;
   display: none;
-}
-
-.signup-form {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  align-self: center;
-  top: 48.5vh;
-  animation: fadeIn 8s;
-  -webkit-animation: fadeIn 800ms;
-  -moz-animation: fadeIn 800ms;
-  -o-animation: fadeIn 800ms;
-  -ms-animation: fadeIn 800ms;
-  position: absolute;
-  transition-property: top;
-  transition-duration: 800ms;
 }
 
 .signup-form input {
@@ -284,21 +230,9 @@
   font-style: normal;
   font-weight: 700;
   font-size: 15px;
-
 }
 
-.signup-form input::placeholder {
-  font-family: var(--inter-font);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 18.15px;
-  text-align: center;
-  color: #ffabab;
-  letter-spacing: 0em;
-}
-
-.socials-signup-hide {
+.socials-logos-hide {
   animation: fadeOut 8s;
   -webkit-animation: fadeOut 800ms;
   -moz-animation: fadeOut 800ms;
@@ -309,21 +243,17 @@
   display: none;
 }
 
-.socials-signup-container {
-  text-align: center;
-}
-
-#signup-using-socials {
+#text-using-socials {
   font-family: var(--inter-font);
   font-size: 15px;
   font-weight: 400;
   line-height: 18px;
   letter-spacing: 0em;
   text-align: center;
-  color: #FFABAB;
+  color: #ffabab;
 }
 
-.socials-logos{
+.socials-logos {
   display: flex;
   margin-top: 2vh;
   justify-content: center;
