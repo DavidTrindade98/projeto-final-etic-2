@@ -6,7 +6,7 @@ import back from "../../assets/back.svg";
 import facebook from "../../assets/facebook.svg";
 import google from "../../assets/google.svg";
 import apple from "../../assets/apple.svg"
-
+import { useNavigate } from "react-router-dom";
 
 
 export default function SignupORloginPage() {
@@ -16,8 +16,11 @@ export default function SignupORloginPage() {
     notClicked(!isClicked);
   }
 
+  const navigate = useNavigate();
+
   return (
     <default-screen>
+
       <div className="SignupORloginPage">
         <img
           src={back}
@@ -49,6 +52,7 @@ export default function SignupORloginPage() {
             }
             onClick={() => {
               Clicked();
+              notClicked();
             }} 
 
           >
@@ -58,6 +62,7 @@ export default function SignupORloginPage() {
             id={
               isClicked ? "login-text-button" : "login-text-button-no-display"
             }
+            onClick={() => navigate("/Login")}
           >
             Log in
           </text>
@@ -71,6 +76,7 @@ export default function SignupORloginPage() {
           </div>
         </div>
       </div>
+
     </default-screen>
   );
 }

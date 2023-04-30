@@ -1,6 +1,6 @@
 import "../../styles/questionnaire/questionnaire.css";
 import "../../styles/questionnaire/questionnaire4.css";
-import LogoSmall2 from "../../components/LogoSmall2";
+import LogoSmall from "../../components/LogoSmall";
 import BackButton from "../../components/BackButton";
 import NextButton from "../../components/NextButton";
 import { useNavigate } from "react-router-dom";
@@ -12,7 +12,7 @@ export default function Questionnaire3() {
     <div className="questionnaire_container">
         <div className="questionnaire_top_container">
           <BackButton />
-          <LogoSmall2 />
+          <LogoSmall />
         </div>
         <div className="questionnaire_middle_container">
           <div className="questionnaire_middle_container_text_container">

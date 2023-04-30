@@ -1,5 +1,5 @@
 import "../../styles/questionnaire/questionnaire.css";
-import LogoSmall2 from "../../components/LogoSmall2";
+import LogoSmall from "../../components/LogoSmall";
 import QuestionnaireSquare from "../../components/QuestionnaireSquare";
 import BackButton from "../../components/BackButton";
 import NextButton from "../../components/NextButton";
@@ -17,7 +17,7 @@ export default function Questionnaire2() {
     <div className="questionnaire_container">
         <div className="questionnaire_top_container">
           <BackButton />
-          <LogoSmall2 />
+          <LogoSmall />
         </div>
         <div className="questionnaire_middle_container">
           <div className="questionnaire_middle_container_text_container">

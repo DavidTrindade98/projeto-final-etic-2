@@ -1,5 +1,5 @@
 import Button from "../../components/Button";
-import LogoSmall2 from "../../components/LogoSmall2";
+import LogoSmall from "../../components/LogoSmall";
 import BackButton from "../../components/BackButton";
 import "../../styles/questionnaire/questionnaire.css";
 import "../../styles/questionnaire/questionnaire5.css";
@@ -10,7 +10,7 @@ export default function Questionnaire5() {
         <div className="questionnaire_container">
             <div className="questionnaire_top_container">
                 <BackButton />
-                <LogoSmall2 />
+                <LogoSmall />
             </div>
 
             <div className="questionnaire_middle_container5">

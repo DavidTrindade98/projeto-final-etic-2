@@ -3,7 +3,6 @@
 .button{
   display: flex;
   justify-content: center;
-  
 }
 
 #button {
@@ -14,16 +13,12 @@
   padding: 21px 82px;
   width: 60vw;
   height: 8vh;
-  margin-top: 5vh;
   border: 2px solid #ffffff;
   border-radius: 70px;
   background-color: var(--background1);
   cursor: pointer;
   transition-property: margin-top;
   transition-duration: 800ms;
-  margin-top: 4.58vh;
-  margin-right: 10.1vw;
-  margin-left: 13.3vw;
 }
 
 #button-text {
