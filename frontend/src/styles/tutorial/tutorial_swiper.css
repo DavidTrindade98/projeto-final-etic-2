@@ -12,6 +12,7 @@
 }
 
 .swiper-wrapper {
+  
 }
 
 .swiper-slide {
@@ -43,25 +44,26 @@ span.swiper-pagination-bullet {
   margin-left: 8.5%;
   background-image: url(../../assets/back.svg);
   background-repeat: no-repeat;
-  background-size: 100% 29.5px;
+  background-size: 100% 30px;
   background-position: center;
   color: transparent;
+  position: absolute;
+  z-index: 1;
 }
 
 .swiper-button-next {
   visibility: hidden;
+  display: none;
 }
 
-span {
-  position:absolute;
+span[slot="container-start"] {
+  /* add your styles here */
+  position: absolute;
   align-items: center;
-  gap: 30vw;
-  height: 12vh;
+  width: 100vw;
 }
 
-.container-start{
-  
-}
+
 
 /* Page 1*/
 

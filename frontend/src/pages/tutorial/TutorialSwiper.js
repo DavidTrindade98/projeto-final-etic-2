@@ -3,13 +3,13 @@ import People from "../../assets/people.svg";
 import Plane from "../../assets/plane.svg";
 import House from "../../assets/house.svg";
 import Happy from "../../assets/happy.svg";
-import LogoSmall from "../../components/LogoSmall.js";
 import Button from "../../components/Button";
 import { refreshPage } from "../../helpers/RefreshPage";
 import { Navigation, Pagination, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useNavigate } from "react-router-dom";
 import SwiperCore, { History } from "swiper/core";
+import LogoSmall2 from "../../components/LogoSmall2";
 
 import "swiper/css/bundle";
 import "swiper/css/navigation";
@@ -41,11 +41,6 @@ export default function TutorialSwiper() {
         onSlideChange={() => console.log("slide change")}
       >
         <SwiperSlide data-history="1" key={1}>
-          <div
-            className="swiper-button-prev"
-          >
-          </div>
-
           <p id="tutorial_text">
             Hi, Jane!<br></br>Heres a short<br></br>tutorial for you:
           </p>
@@ -153,7 +148,7 @@ export default function TutorialSwiper() {
             }}
           />
         </SwiperSlide>
-        <span slot="container-start">{<LogoSmall />}</span>
+        <span slot="container-start">{<LogoSmall2 />}</span>
       </Swiper>
     </div>
   );

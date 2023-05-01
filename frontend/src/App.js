@@ -10,7 +10,7 @@ import Questionnaire2 from './pages/questionnaire/Questionnaire2';
 import Questionnaire3 from './pages/questionnaire/Questionnaire3';
 import Questionnaire4 from './pages/questionnaire/Questionnaire4';
 import Questionnaire5 from './pages/questionnaire/Questionnaire5';
-
+import SwiperTutorial from './pages/tutorial/SwiperTutorial';
 
 
 
@@ -27,6 +27,7 @@ function App() {
           <Route path="/TutorialSwiper/4" element={<TutorialSwiper/>} />
           <Route path="/TutorialSwiper/5" element={<TutorialSwiper/>} />
         </Route>
+        <Route path="/SwiperTutorial" element={<SwiperTutorial />}></Route>
         <Route path="/Questionnaire1" element={<Questionnaire1/>}></Route>
         <Route path="/Questionnaire2" element={<Questionnaire2/>}></Route>
         <Route path="/Questionnaire3" element={<Questionnaire3/>}></Route>
