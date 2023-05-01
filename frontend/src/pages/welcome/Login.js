@@ -21,13 +21,15 @@ export default function Login() {
             <input type="email" id="E-mail" placeholder="E-mail" />
             <input type="password" id="Password" placeholder="Password" />
           </form>
-          <Button buttonTextHolder={"Login"} />
-          <div className="socials-container">
-            <p id="text-using-socials">or login with:</p>
-            <div className="socials-logos">
-              <img src={facebook} alt="facebook" />
-              <img src={google} alt="google" />
-              <img src={apple} alt="apple" />
+          <div className="buttons-container">
+            <Button buttonTextHolder={"Login"} />
+            <div className="socials-container">
+              <p id="text-using-socials">or login with:</p>
+              <div className="socials-logos">
+                <img src={facebook} alt="facebook" />
+                <img src={google} alt="google" />
+                <img src={apple} alt="apple" />
+              </div>
             </div>
           </div>
         </div>

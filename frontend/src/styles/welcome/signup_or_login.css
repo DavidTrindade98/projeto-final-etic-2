@@ -3,7 +3,7 @@
 .signup-or-login-page {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 34px;
 }
 
 .text-container {
@@ -101,8 +101,8 @@
 
 #logo-back-hide {
   position: absolute;
-  width: 11px;
-  height: 23px;
+  width: 30px;
+  height: 30px;
   left: 9.86vw;
   top: 6vh;
   animation: fadeOut 8s;
@@ -117,8 +117,8 @@
 #logo-back-show {
   position: absolute;
   cursor: pointer;
-  width: 11px;
-  height: 23px;
+  width: 30px;
+  height: 30px;
   left: 9.86vw;
   top: 4.87vh;
   animation: fadeIn 8s;
@@ -204,6 +204,8 @@
   display: none;
 }
 
+
+
 /* DOM Manipulation Create Form*/
 
 .form-container-hide {
@@ -215,21 +217,6 @@
   opacity: 0;
   visibility: hidden;
   display: none;
-}
-
-.signup-form input {
-  text-align: center;
-  outline: 0;
-  border-width: 0 0 2px;
-  border-color: var(--background2);
-  background-color: transparent;
-  width: 73vw;
-  color: white;
-  line-height: 4vh;
-  font-family: var(--inter-font);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 15px;
 }
 
 .socials-logos-hide {

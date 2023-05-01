@@ -47,13 +47,17 @@ export default function SignupORloginPage() {
               Sign up to start or login to your account.
             </p>
           </div>
+
           <form
-            className={isClicked ? "form-container-hide" : "form-container"}
+            className={
+              isClicked ? "form-container-hide" : "form-container"
+            }
           >
             <input type="name" id="Name" placeholder="Name" />
             <input type="email" id="E-mail" placeholder="E-mail" />
             <input type="password" id="Password" placeholder="Password" />
           </form>
+
           <div className="buttons-container">
             <button
               className={

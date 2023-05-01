@@ -3,7 +3,7 @@
 .login-page {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 34px;
 }
 
 .logo-container {
