@@ -1,0 +1,30 @@
+@import "../App.css";
+
+.search-bar-container {
+    border-radius: 70px;
+    border: 2px solid #FFFFFF;
+    display: grid;
+    grid-template-columns: 6vh auto;
+    align-items: center;
+}
+
+#magnifying_glass {
+    display: flex;
+    height: 16px;
+    width: 16px;
+    border-radius: 0px;
+    justify-content: flex-start;
+    color: #FFABAB;
+    justify-self: center;
+}
+
+.search-bar-container input {
+    border: none;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.search-bar-container ::placeholder {
+    text-align: left;
+    justify-content: flex-start;
+}

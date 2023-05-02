@@ -1,0 +1,81 @@
+@import "../App.css";
+
+.chat-title-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-title-container h1 {
+    font-family: var(--inter-font);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+}
+
+.chat-filters-search-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: flex-end;
+}
+
+.filters-text-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+#filter {
+    height: 16.62487030029297px;
+    width: 15.75px;
+    left: 3.5px;
+    top: 2.625px;
+    border-radius: 0px;
+
+}
+
+.search-text-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.chat-filters-search-container p {
+    font-family: var(--inter-font);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+}
+
+.big-glass-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8vh;
+}
+
+.big-glass-container-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.big-glass-container-text p {
+    font-family: var(--inter-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+
+}
