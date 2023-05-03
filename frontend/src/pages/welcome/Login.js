@@ -11,7 +11,7 @@ export default function Login() {
   return (
     <default-screen>
       <wrapper-screen>
-        <TopContainer logoStyle={{ display: "none" }} />
+        <TopContainer logoStyle={{ display: "none" }} backButtonFill="white" />
         <div className="logo-container">
           <img src={logo} id="logo" alt="logo" />
         </div>

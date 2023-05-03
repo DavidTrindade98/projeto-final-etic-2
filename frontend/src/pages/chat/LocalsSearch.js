@@ -5,30 +5,47 @@ import filter from "../../assets/filter.svg";
 import magnifying_glass from "../../assets/magnifying_glass.svg";
 import { useState } from "react";
 import "../../styles/chat/filter_overlay.css";
-import { useNavigate } from "react-router-dom";
+import "../../styles/chat/menu_overlay.css";
+import MenuOverlay from "./MenuOverlay";
 
 export default function LocalsSearch() {
-  const navigate = useNavigate();
-  const [isOpen, setIsOpen] = useState(false);
+
+
+
+  const [isOpenFilter, setIsOpenFilter] = useState(false);
+
+  const toggleFilter = () => {
+    setIsOpenFilter(!isOpenFilter);
+  };
+
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpenMenu(!isOpenMenu);
   };
 
   return (
     <default-screen>
       <wrapper-screen>
-        <TopContainer backStyle={{ visibility: "hidden" }} />
+        <TopContainer backStyle={{ visibility: "hidden" }} logoClick={toggleMenu} logoSmallFill="white" />
+        <div className={`menu-overlay ${isOpenMenu ? "open" : ""}`}>
+          <div className="overlay-menu">
+          <button className="back-button" onClick={toggleMenu}>
+              Back
+            </button>
+            <MenuOverlay />
+          </div>
+        </div>
         <div className="locals-search-container">
           <div className="chat-title-container">
             <h1>Find the Local!</h1>
           </div>
           <SearchBar searchBarText="Choose a city..." />
           <div className="chat-filters-search-container">
-            <div className="filters-text-container" onClick={toggleMenu}>
-              <div className={`filter-overlay ${isOpen ? "open" : ""}`}>
+            <div className="filters-text-container" onClick={toggleFilter}>
+              <div className={`filter-overlay ${isOpenFilter ? "open" : ""}`}>
                 <div className="filter-menu">
-                  <button className="back-button" onClick={toggleMenu}>
+                  <button className="back-button" onClick={toggleFilter}>
                     Back
                   </button>
                   <h2>Filter Options</h2>

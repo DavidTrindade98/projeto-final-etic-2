@@ -11,7 +11,7 @@ export default function Questionnaire5() {
   return (
     <default-screen>
       <wrapper-screen>
-        <TopContainer />
+        <TopContainer backButtonFill="white" logoSmallFill="white"/>
         <div className="questionnaire_container">
           <div className="questionnaire_middle_container5">
             <div className="questionnaire_middle_container_text_container">

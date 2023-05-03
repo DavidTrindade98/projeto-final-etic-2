@@ -23,7 +23,7 @@ export default function SignupORloginPage() {
   return (
     <default-screen>
       <wrapper-screen>
-        <TopContainer topContainerStyle={{ visibility: "hidden" }} />
+        <TopContainer topContainerStyle={{ visibility: "hidden" }} backButtonFill="white" />
         <img
           src={back}
           id={isClicked ? "logo-back-hide" : "logo-back-show"}

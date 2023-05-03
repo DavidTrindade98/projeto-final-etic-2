@@ -1,19 +1,22 @@
 import "../../src/styles/App.css";
-import LogoSmall from "./LogoSmall";
+import LogoSmallSVG from "./LogoSmallSVG";
 import "../../src/styles/components/logo_small.css";
-import BackButton from "./BackButton";
 import "../styles/components/top_container.css";
+import BackButtonSVG from "./BackButtonSVG";
 
 export default function TopContainer({
   logoStyle,
   backStyle,
   backClick,
   topContainerStyle,
+  logoClick,
+  backButtonFill,
+  logoSmallFill
 }) {
   return (
     <div className="top-container" style={topContainerStyle}>
-      <BackButton backButtonStyle={backStyle} backButtonClick={backClick} />
-      <LogoSmall logoSmallStyle={logoStyle} />
+      <BackButtonSVG fill={backButtonFill} backButtonStyle={backStyle} backButtonClick={backClick} />
+      <LogoSmallSVG fill={logoSmallFill} logoSmallStyle={logoStyle} logoSmallClick={logoClick} />
     </div>
   );
 }
