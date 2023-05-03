@@ -12,7 +12,7 @@ import Questionnaire4 from './pages/questionnaire/Questionnaire4';
 import Questionnaire5 from './pages/questionnaire/Questionnaire5';
 import SwiperTutorial from './pages/tutorial/SwiperTutorial';
 import LocalsSearch from './pages/chat/LocalsSearch';
-
+import FilterMenu from './pages/chat/FilterOverlay';
 
 
 function App() {
@@ -35,6 +35,7 @@ function App() {
         <Route path="/Questionnaire4" element={<Questionnaire4/>}></Route>
         <Route path="/Questionnaire5" element={<Questionnaire5/>}></Route>
         <Route path="/LocalsSearch" element={<LocalsSearch />}></Route>
+        <Route path="/FilterOverlay" element={<FilterMenu />}></Route>
     </Routes>
   );
 }

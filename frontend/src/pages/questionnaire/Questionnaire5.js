@@ -2,8 +2,12 @@ import Button from "../../components/Button";
 import "../../styles/questionnaire/questionnaire.css";
 import "../../styles/questionnaire/questionnaire5.css";
 import TopContainer from "../../components/TopContainer";
+import { useNavigate } from "react-router-dom";
 
 export default function Questionnaire5() {
+
+  const navigate = useNavigate();
+  
   return (
     <default-screen>
       <wrapper-screen>
@@ -16,7 +20,7 @@ export default function Questionnaire5() {
               </pre>
             </div>
           </div>
-          <Button buttonTextHolder={"Ok"} />
+          <Button buttonTextHolder={"Ok"} buttonOnClick={() => navigate("/LocalsSearch")} />
         </div>
       </wrapper-screen>
     </default-screen>

@@ -1,0 +1,27 @@
+@import "../App.css";
+
+.filter-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.9);
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+}
+
+.filter-overlay.open {
+  transform: translateX(0%);
+}
+
+.filter-menu {
+
+}
+
+.filter-overlay.open .filter-menu {
+    transform: translateX(0%);
+  }
+
+
