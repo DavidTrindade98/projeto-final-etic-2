@@ -3,6 +3,7 @@ import filter from "../../assets/filter.svg";
 import "../../styles/chat/locals_search.css";
 
 export default function FilterMenu() {
+
   return (
     <wrapper-screen>
       <div className="filter-container">
@@ -10,11 +11,22 @@ export default function FilterMenu() {
           <img src={filter} alt="filter" id="filter_icon"></img>
           <h1>Filters</h1>
         </div>
-        <div className="filters-gender-container">
+        <div className="gender-container">
           <h2>Gender</h2>
-          <div className="filters-gender-container-2">
+          <div className="gender-container-2">
             <p>Male</p>
             <p>Female</p>
+          </div>
+        </div>
+        <div className="age-container">
+          <h2>Age</h2>
+          <div className="age-container-2">
+            <input type="range" step="50" ></input>
+            <div className="age-container-ranges">
+              <p>{"<"}20</p>
+              <p>40</p>
+              <p>+60</p>
+            </div>
           </div>
         </div>
       </div>

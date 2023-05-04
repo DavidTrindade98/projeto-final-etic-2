@@ -10,18 +10,17 @@ import MenuOverlay from "./MenuOverlay";
 import FilterOverlay from "./FilterOverlay";
 
 export default function LocalsSearch() {
-  
-  const [isOpenFilter, setIsOpenFilter] = useState(false);
 
+  const [isOpenFilter, setIsOpenFilter] = useState(false);
   const toggleFilter = () => {
     setIsOpenFilter(!isOpenFilter);
   };
 
   const [isOpenMenu, setIsOpenMenu] = useState(false);
-
   const toggleMenu = () => {
     setIsOpenMenu(!isOpenMenu);
   };
+
 
   return (
     <default-screen>
@@ -46,12 +45,12 @@ export default function LocalsSearch() {
         <div className={`filter-overlay ${isOpenFilter ? "open" : ""}`}>
           <div className="filter-menu">
             <wrapper-screen>
-            <TopContainer
-              backButtonFill="#F0694F"
-              logoStyle={{ display: "none" }}
-              backClick={toggleFilter}
-            />
-            <FilterOverlay />
+              <TopContainer
+                backButtonFill="#F0694F"
+                logoStyle={{ display: "none" }}
+                backClick={toggleFilter}
+              />
+              <FilterOverlay />
             </wrapper-screen>
           </div>
         </div>

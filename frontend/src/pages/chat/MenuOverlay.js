@@ -1,7 +1,8 @@
 import "../../styles/chat/menu_overlay.css";
 import "../../styles/chat/locals_search.css";
 
-export default function MenuOverlay() {
+
+export default function MenuOverlay({toggleMenu}) {
   return (
     <wrapper-screen>
       <div className="menu-container">
@@ -11,7 +12,7 @@ export default function MenuOverlay() {
           </div>
         </div>
         <div className="menu-links-container">
-          <p>Home</p>
+          <p onClick={() => toggleMenu()}>Home</p>
           <p>Chat</p>
           <p>My profile</p>
           <p>FAQ</p>
