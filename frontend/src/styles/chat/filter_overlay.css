@@ -16,9 +16,6 @@
   transform: translateX(0%);
 }
 
-.filter-menu {
-}
-
 .filter-overlay.open .filter-menu {
   transform: translateX(0%);
 }
@@ -44,15 +41,23 @@
   font-family: var(--inter-font);
   font-style: normal;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 16px;
   color: var(--background3);
 }
 
-.gender-container {
-  display: flex;
-  flex-direction: column;
+.filter-container p {
+  font-family: var(--inter-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--background3);
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 }
+
+/*Gender*/
 
 .gender-container-2 {
   display: flex;
@@ -60,7 +65,21 @@
   gap: 25px;
 }
 
-.gender-container p {
+/*Age*/
+
+.age-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.age-container-2{
+  display: flex;
+  flex-direction: column;
+}
+
+.age-container-ranges{
+  display: flex;
+  justify-content: space-between;
   font-family: var(--inter-font);
   font-style: normal;
   font-weight: 400;
@@ -71,15 +90,33 @@
   margin-block-end: 0em;
 }
 
-.age-container-ranges{
+/*Advices*/
+
+.advices-in-container{
   display: flex;
-  gap: 25px;
-  font-family: var(--inter-font);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 16px;
-  color: var(--background3);
-  margin-block-start: 0em;
-  margin-block-end: 0em;
+  flex-direction: column;
+}
+
+.advices-in-container-gap{
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.advices-in-container-gap img{
+  width: 16px;
+  height: 16px;
+}
+
+.filter-advice-choice{
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+/*Minimal Rating*/
+
+.filter-stars-container {
+  display: flex;
+  gap: 5px;
 }
