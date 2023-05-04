@@ -7,11 +7,10 @@ import { useState } from "react";
 import "../../styles/chat/filter_overlay.css";
 import "../../styles/chat/menu_overlay.css";
 import MenuOverlay from "./MenuOverlay";
+import FilterOverlay from "./FilterOverlay";
 
 export default function LocalsSearch() {
-
-
-
+  
   const [isOpenFilter, setIsOpenFilter] = useState(false);
 
   const toggleFilter = () => {
@@ -27,13 +26,33 @@ export default function LocalsSearch() {
   return (
     <default-screen>
       <wrapper-screen>
-        <TopContainer backStyle={{ visibility: "hidden" }} logoClick={toggleMenu} logoSmallFill="white" />
+        <TopContainer
+          backStyle={{ visibility: "hidden" }}
+          logoClick={toggleMenu}
+          logoSmallFill="white"
+        />
         <div className={`menu-overlay ${isOpenMenu ? "open" : ""}`}>
           <div className="overlay-menu">
-          <button className="back-button" onClick={toggleMenu}>
-              Back
-            </button>
-            <MenuOverlay />
+            <wrapper-screen>
+              <TopContainer
+                backButtonFill="#F0694F"
+                logoStyle={{ display: "none" }}
+                backClick={toggleMenu}
+              />
+              <MenuOverlay />
+            </wrapper-screen>
+          </div>
+        </div>
+        <div className={`filter-overlay ${isOpenFilter ? "open" : ""}`}>
+          <div className="filter-menu">
+            <wrapper-screen>
+            <TopContainer
+              backButtonFill="#F0694F"
+              logoStyle={{ display: "none" }}
+              backClick={toggleFilter}
+            />
+            <FilterOverlay />
+            </wrapper-screen>
           </div>
         </div>
         <div className="locals-search-container">
@@ -43,19 +62,6 @@ export default function LocalsSearch() {
           <SearchBar searchBarText="Choose a city..." />
           <div className="chat-filters-search-container">
             <div className="filters-text-container" onClick={toggleFilter}>
-              <div className={`filter-overlay ${isOpenFilter ? "open" : ""}`}>
-                <div className="filter-menu">
-                  <button className="back-button" onClick={toggleFilter}>
-                    Back
-                  </button>
-                  <h2>Filter Options</h2>
-                  <ul>
-                    <li>Filter Option 1</li>
-                    <li>Filter Option 2</li>
-                    <li>Filter Option 3</li>
-                  </ul>
-                </div>
-              </div>
               <img src={filter} alt="filter" id="filter_icon"></img>
               <p>Filters</p>
             </div>

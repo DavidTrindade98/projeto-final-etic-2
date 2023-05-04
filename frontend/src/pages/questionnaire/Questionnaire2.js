@@ -14,7 +14,7 @@ export default function Questionnaire2() {
   return (
     <default-screen>
       <wrapper-screen>
-        <TopContainer backButtonFill="white" logoSmallFill="white"/>
+        <TopContainer backButtonFill="white" logoSmallFill="white" backClick={() => navigate("/Questionnaire1")}/>
         <div className="questionnaire_container">
           <div className="questionnaire_middle_container">
             <div className="questionnaire_middle_container_text_container">

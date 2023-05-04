@@ -17,11 +17,32 @@
 }
 
 .filter-menu {
-
 }
 
 .filter-overlay.open .filter-menu {
-    transform: translateX(0%);
-  }
+  transform: translateX(0%);
+}
 
+.filter-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 18vh;
+}
 
+.filter-container h1 {
+  font-family: var(--inter-font);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--background3);
+}
+
+.filters-gender-container{
+
+}
+
+.filters-gender-container-2{
+  
+}

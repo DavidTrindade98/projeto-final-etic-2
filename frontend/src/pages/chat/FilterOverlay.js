@@ -1,27 +1,23 @@
-import React, { useState } from 'react';
 import "../../styles/chat/filter_overlay.css";
+import filter from "../../assets/filter.svg";
+import "../../styles/chat/locals_search.css";
 
 export default function FilterMenu() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
-    <>
-      <button onClick={toggleMenu}>Filters</button>
-      <div className={`filter-overlay ${isOpen ? 'open' : ''}`}>
-        <div className="filter-menu">
-          <button onClick={toggleMenu}>Close Filters</button>
-          <h2>Filter Options</h2>
-          <ul>
-            <li>Filter Option 1</li>
-            <li>Filter Option 2</li>
-            <li>Filter Option 3</li>
-          </ul>
+    <wrapper-screen>
+      <div className="filter-container">
+        <div className="filters-text-container">
+          <img src={filter} alt="filter" id="filter_icon"></img>
+          <h1>Filters</h1>
+        </div>
+        <div className="filters-gender-container">
+          <h2>Gender</h2>
+          <div className="filters-gender-container-2">
+            <p>Male</p>
+            <p>Female</p>
+          </div>
         </div>
       </div>
-    </>
+    </wrapper-screen>
   );
 }
