@@ -1,5 +1,4 @@
-import "../../src/styles/App.css";
-import "../../src/styles/components/logo_small.css";
+import "../../styles/components/logo_small.css";
 
 export default function LogoSmallSVG({ logoSmallStyle, logoSmallClick, fill }) {
     return (

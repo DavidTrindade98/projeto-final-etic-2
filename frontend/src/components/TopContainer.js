@@ -1,8 +1,8 @@
 import "../../src/styles/App.css";
-import LogoSmallSVG from "./LogoSmallSVG";
+import LogoSmallSVG from "./svgs/LogoSmallSVG";
 import "../../src/styles/components/logo_small.css";
 import "../styles/components/top_container.css";
-import BackButtonSVG from "./BackButtonSVG";
+import BackButtonSVG from "./svgs/BackButtonSVG";
 
 export default function TopContainer({
   logoStyle,

@@ -1,15 +1,19 @@
-import "../../styles/chat/locals_search.css";
-import TopContainer from "../../components/TopContainer";
-import SearchBar from "../../components/SearchBar";
-import filter from "../../assets/filter.svg";
-import magnifying_glass from "../../assets/magnifying_glass.svg";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "../../styles/chat/locals_search.css";
 import "../../styles/chat/filter_overlay.css";
 import "../../styles/chat/menu_overlay.css";
+import filter from "../../assets/filter.svg";
+import magnifying_glass from "../../assets/magnifying_glass.svg";
+import TopContainer from "../../components/TopContainer";
+import SearchBar from "../../components/SearchBar";
 import MenuOverlay from "./MenuOverlay";
 import FilterOverlay from "./FilterOverlay";
 
+
 export default function LocalsSearch() {
+
+  const navigate = useNavigate();
 
   const [isOpenFilter, setIsOpenFilter] = useState(false);
   const toggleFilter = () => {
@@ -20,9 +24,10 @@ export default function LocalsSearch() {
   const toggleMenu = () => {
     setIsOpenMenu(!isOpenMenu);
   };
-
-
+  
+  
   return (
+    
     <default-screen>
       <wrapper-screen>
         <TopContainer
@@ -38,7 +43,7 @@ export default function LocalsSearch() {
                 logoStyle={{ display: "none" }}
                 backClick={toggleMenu}
               />
-              <MenuOverlay />
+              <MenuOverlay closeMenu={toggleMenu}/>
             </wrapper-screen>
           </div>
         </div>
@@ -65,7 +70,7 @@ export default function LocalsSearch() {
               <p>Filters</p>
             </div>
             <div className="search-text-container">
-              <p>Search {">"}</p>
+              <p onClick={() => navigate("/ResultsPage")}>Search {">"}</p>
             </div>
           </div>
           <div className="big-glass-container">
@@ -83,5 +88,7 @@ export default function LocalsSearch() {
         </div>
       </wrapper-screen>
     </default-screen>
+    
   );
 }
+

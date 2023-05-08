@@ -1,10 +1,10 @@
 import "../../styles/chat/filter_overlay.css";
 import filter from "../../assets/filter.svg";
 import "../../styles/chat/locals_search.css";
-import art from "../../assets/art.svg";
-import food from "../../assets/food.svg";
-import music from "../../assets/music.svg";
 import VectorStar from "../../assets/VectorStar.svg";
+import ArtSVG from "../../components/svgs/ArtSVG";
+import FoodSVG from "../../components/svgs/FoodSVG";
+import MusicSVG from "../../components/svgs/MusicSVG";
 
 export default function FilterMenu() {
 
@@ -37,15 +37,15 @@ export default function FilterMenu() {
           <h2>Advices in</h2>
           <div className="advices-in-container-gap">
             <div className="filter-advice-choice">
-              <img src={art} alt="art" ></img>
+              <ArtSVG artFill={"#F0694F"} />
               <p>art</p>
             </div>
             <div className="filter-advice-choice">
-              <img src={food} alt="food" ></img>
+              <FoodSVG foodFill={"#F0694F"} />
               <p>food</p>
             </div>
             <div className="filter-advice-choice">
-              <img src={music} alt="music" ></img>
+              <MusicSVG musicFill={"#F0694F"} />
               <p>music</p>
             </div>
           </div>

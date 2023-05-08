@@ -13,6 +13,7 @@ import Questionnaire5 from './pages/questionnaire/Questionnaire5';
 import SwiperTutorial from './pages/tutorial/SwiperTutorial';
 import LocalsSearch from './pages/chat/LocalsSearch';
 import FilterMenu from './pages/chat/FilterOverlay';
+import ResultsPage from './pages/chat/ResultsPage';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <Route path="/Questionnaire5" element={<Questionnaire5/>}></Route>
         <Route path="/LocalsSearch" element={<LocalsSearch />}></Route>
         <Route path="/FilterOverlay" element={<FilterMenu />}></Route>
+        <Route path="/ResultsPage" element={<ResultsPage/>} />
     </Routes>
   );
 }

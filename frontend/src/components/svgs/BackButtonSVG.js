@@ -1,6 +1,4 @@
-import "../../src/styles/App.css";
-import "../../src/styles/components/back_button.css";
-
+import "../../styles/components/back_button.css";
 
 export default function BackButtonSVG({ fill, backButtonStyle, backButtonClick }) {
 

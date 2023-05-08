@@ -42,6 +42,11 @@
   align-items: flex-start;
 }
 
+.search-text-container p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
 .chat-filters-search-container p {
   font-family: var(--inter-font);
   font-size: 15px;

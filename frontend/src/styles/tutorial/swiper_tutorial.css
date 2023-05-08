@@ -1,58 +1,52 @@
 @import "../App.css";
 
+
+/* Set up the swiper container */
 .swiper-container {
-  position: relative;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Set up the swiper pages */
+.swiper-page {
+  scroll-snap-align: start;
+  flex-shrink: 0;
   width: 100%;
   height: 100%;
-  overflow-x: scroll ;
-  scroll-snap-type: x mandatory;
-  
-}
-
-.swiper-wrapper {
   display: flex;
-  scroll-snap-type: x mandatory;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
 }
 
-.swiper-slide {
-  flex: 0 0 100%;
-  height: 100%;
-  scroll-snap-align: start;
-}
-
-.slide1 {
-  background-color: red;
-}
-
-.slide2 {
-  background-color: blue;
-}
-
-.slide3 {
-  background-color: green;
-}
-
-.slide4 {
-  background-color: yellow;
-}
-
+/* Set up the dots container */
 .swiper-dots {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
+/* Set up the dots */
 .swiper-dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  margin-right: 10px;
-  background-color: #ccc;
+  margin: 0 0.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
+/* Set the active dot */
 .swiper-dot.active {
-  background-color: #555;
+  background-color: #ffffff;
+}
+
+/* Set the scroll behavior for clicking on a dot */
+.swiper-dot:focus {
+  scroll-snap-align: center;
 }

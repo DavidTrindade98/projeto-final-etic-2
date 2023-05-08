@@ -1,0 +1,98 @@
+@import "../App.css";
+
+.results-container {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-radius: 26px;
+  flex-direction: column;
+  margin-top: 5vh;
+}
+
+.result-top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
+
+.result-top-container p {
+  font-family: var(--inter-font);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--background3);
+}
+
+.result-star-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.result-star-rating p {
+  color: #e80f5d;
+  font-family: var(--inter-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.result-preferences-container {
+  display: flex;
+  flex-direction: column;
+  height: 6vh;
+  justify-content: center;
+  margin-left: 6vw;
+}
+
+.result-preferences-container p {
+  font-family: var(--inter-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--background3);
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.result-preferences-container-gap {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.result-preferences-choice {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+
+.result-preferences-container-gap img {
+  width: 16px;
+  height: 16px;
+}
+
+.ask-for-advice {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: flex-end;
+  margin-right: 5vw;
+}
+
+.ask-for-advice p {
+  font-family: var(--inter-font);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--background3);
+}
