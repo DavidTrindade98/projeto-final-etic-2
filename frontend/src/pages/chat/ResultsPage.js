@@ -43,7 +43,7 @@ export default function ResultsPage() {
                 logoStyle={{ display: "none" }}
                 backClick={toggleMenu}
               />
-              <MenuOverlay />
+              <MenuOverlay closeMenu={toggleMenu}/>
             </wrapper-screen>
           </div>
         </div>

@@ -25,9 +25,7 @@ export default function LocalsSearch() {
     setIsOpenMenu(!isOpenMenu);
   };
   
-  
   return (
-    
     <default-screen>
       <wrapper-screen>
         <TopContainer
@@ -88,7 +86,6 @@ export default function LocalsSearch() {
         </div>
       </wrapper-screen>
     </default-screen>
-    
   );
 }
 

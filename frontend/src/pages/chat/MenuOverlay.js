@@ -1,8 +1,10 @@
 import "../../styles/chat/menu_overlay.css";
 import "../../styles/chat/locals_search.css";
-
+import { useNavigate } from "react-router-dom";
 
 export default function MenuOverlay({closeMenu}) {
+
+  const navigate = useNavigate();
 
   return (
     <wrapper-screen>
@@ -13,10 +15,10 @@ export default function MenuOverlay({closeMenu}) {
           </div>
         </div>
         <div className="menu-links-container">
-          <p onClick={closeMenu}>Home</p>
-          <p>Chat</p>
-          <p>My profile</p>
-          <p>FAQ</p>
+          <p onClick={() => {navigate("/LocalsSearch"); closeMenu();}}>Home</p>
+          <p onClick={() => navigate("/Chat")}>Chat</p> 
+          <p onClick={() => navigate("/Profile")}>My profile</p>
+          <p onClick={() => navigate("/FAQ")}>FAQ</p>
         </div>
       </div>
     </wrapper-screen>

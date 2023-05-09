@@ -1,0 +1,95 @@
+@import "../App.css";
+
+.chat-page-second-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.chat-page-second-container p {
+  font-family: var(--inter-font);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #e9135c;
+}
+
+.chat-page-line {
+  border: 1px solid #f0694f;
+  margin-top: 1vh;
+  margin-bottom: 5vh;
+}
+
+.chat-messages-avatar-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.chat-messages-avatar-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.chat-messages-user-container {
+  display: flex;
+  gap: 18px;
+}
+
+.chat-message-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.chat-message-user-name {
+  display: flex;
+  gap: 8px;
+}
+
+.chat-messages-user-preview {
+  display: flex;
+}
+
+#Dan {
+  font-family: var(--inter-font);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--background3);
+}
+
+.chat-message-user-name p {
+  font-family: var(--inter-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  color: var(--background3);
+}
+
+.chat-messages-user-preview p {
+  font-family: var(--inter-font);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--background3);
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.chat-all-messages-user-container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}

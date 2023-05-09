@@ -14,6 +14,8 @@ import SwiperTutorial from './pages/tutorial/SwiperTutorial';
 import LocalsSearch from './pages/chat/LocalsSearch';
 import FilterMenu from './pages/chat/FilterOverlay';
 import ResultsPage from './pages/chat/ResultsPage';
+import ChatPage from './pages/chat/ChatPage';
+import MessagesPage from './pages/chat/MessagesPage';
 
 
 function App() {
@@ -38,6 +40,8 @@ function App() {
         <Route path="/LocalsSearch" element={<LocalsSearch />}></Route>
         <Route path="/FilterOverlay" element={<FilterMenu />}></Route>
         <Route path="/ResultsPage" element={<ResultsPage/>} />
+        <Route path="/Chat" element={<ChatPage/>} />
+        <Route path="/Chat/Messages" element={<MessagesPage/>} />
     </Routes>
   );
 }
