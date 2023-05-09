@@ -11,6 +11,12 @@ export default function ChatPage() {
     setIsOpenMenu(!isOpenMenu);
   };
 
+  const [activeText, setActiveText] = useState("traveller");
+
+  const handleTextClick = (text) => {
+    setActiveText(text);
+  };
+
   const navigate = useNavigate();
 
   return (
@@ -38,29 +44,68 @@ export default function ChatPage() {
           <h1 style={{ color: "#F0694F" }}>Chat</h1>
         </div>
         <div className="chat-page-second-container">
-          <p>As Traveller</p>
-          <p>As Local</p>
+          <span
+            className={activeText === "traveller" ? "active" : ""}
+            onClick={() => handleTextClick("traveller")}
+          >
+            As Traveller
+          </span>
+          <span
+            className={activeText === "local" ? "active" : ""}
+            onClick={() => handleTextClick("local")}
+          >
+            As Local
+          </span>
         </div>
         <div className="chat-page-line"></div>
-        <div className="chat-all-messages-user-container">
-          <div
-            className="chat-messages-user-container"
-            onClick={() => navigate("/Chat/Messages")}
-          >
-            <div className="chat-messages-avatar-container">
-              <img src={avatar_template} alt="avatar"></img>
-            </div>
-            <div className="chat-message-text-container">
-              <div className="chat-message-user-name">
-                <p id="Dan">Dan</p>
-                <p>|</p>
-                <p>2m</p>
+        <div>
+          {activeText === "traveller" ? (
+            <div>
+              <div className="chat-all-messages-user-container">
+                <div
+                  className="chat-messages-user-container"
+                  onClick={() => navigate("/Chat/Messages")}
+                >
+                  <div className="chat-messages-avatar-container">
+                    <img src={avatar_template} alt="avatar"></img>
+                  </div>
+                  <div className="chat-message-text-container">
+                    <div className="chat-message-user-name">
+                      <p id="Dan">Dan</p>
+                      <p>|</p>
+                      <p>2m</p>
+                    </div>
+                    <div className="chat-messages-user-preview">
+                      <p>Hi! Do you know any good Mexican res A expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de texto em publicações para testar e ajustar aspectos visuais antes de utilizar conteúdo real.{"..."}</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="chat-messages-user-preview">
-                <p>Hi! Do you know any good Mexican res{"..."}</p>
+            </div>
+          ) : (
+            <div>
+              <div className="chat-all-messages-user-container">
+                <div
+                  className="chat-messages-user-container"
+                  onClick={() => navigate("/Chat/Messages")}
+                >
+                  <div className="chat-messages-avatar-container">
+                    <img src={avatar_template} alt="avatar"></img>
+                  </div>
+                  <div className="chat-message-text-container">
+                    <div className="chat-message-user-name">
+                      <p id="Dan">Maggie</p>
+                      <p>|</p>
+                      <p>11m</p>
+                    </div>
+                    <div className="chat-messages-user-preview">
+                      <p>Hi! Hey, are there any discounts for stu visuais antes de utilizar conteúdo real.{"..."}</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
       </wrapper-chat>
     </wrapper-screen>

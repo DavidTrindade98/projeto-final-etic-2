@@ -16,6 +16,7 @@ import FilterMenu from './pages/chat/FilterOverlay';
 import ResultsPage from './pages/chat/ResultsPage';
 import ChatPage from './pages/chat/ChatPage';
 import MessagesPage from './pages/chat/MessagesPage';
+import PersonDetails from './pages/chat/PersonDetails';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
         <Route path="/ResultsPage" element={<ResultsPage/>} />
         <Route path="/Chat" element={<ChatPage/>} />
         <Route path="/Chat/Messages" element={<MessagesPage/>} />
+        <Route path="/Chat/PersonDetails" element={<PersonDetails/>} />
     </Routes>
   );
 }
