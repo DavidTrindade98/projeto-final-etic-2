@@ -17,6 +17,7 @@ import ResultsPage from './pages/chat/ResultsPage';
 import ChatPage from './pages/chat/ChatPage';
 import MessagesPage from './pages/chat/MessagesPage';
 import PersonDetails from './pages/chat/PersonDetails';
+import MyProfile from './pages/profile/MyProfile';
 
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
         <Route path="/Chat" element={<ChatPage/>} />
         <Route path="/Chat/Messages" element={<MessagesPage/>} />
         <Route path="/Chat/PersonDetails" element={<PersonDetails/>} />
+        <Route path="/MyProfile" element={<MyProfile />} />
     </Routes>
   );
 }

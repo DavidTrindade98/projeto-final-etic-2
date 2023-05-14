@@ -1,0 +1,83 @@
+@import "../App.css";
+
+.profile-title {
+  display: flex;
+}
+
+.myprofile-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-title h1 {
+  font-family: var(--inter-font);
+  color: var(--background3);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.profile-avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-self: center;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.myprofile-second-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.myprofile-second-container h1 {
+  font-family: var(--inter-font);
+  color: var(--background3);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.myprofile-total-stars {
+  display: flex;
+  gap: 6px;
+}
+
+.myprofile-total-stars p {
+  font-family: var(--inter-font);
+  color: #e80f5d;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.myprofile-links-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2vh;
+  margin-bottom: 5vh;
+}
+
+.myprofile-links-container p {
+  font-family: var(--inter-font);
+  color: var(--background3);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}

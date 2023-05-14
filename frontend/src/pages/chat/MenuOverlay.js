@@ -17,7 +17,7 @@ export default function MenuOverlay({closeMenu}) {
         <div className="menu-links-container">
           <p onClick={() => {navigate("/LocalsSearch"); closeMenu();}}>Home</p>
           <p onClick={() => navigate("/Chat")}>Chat</p> 
-          <p onClick={() => navigate("/Profile")}>My profile</p>
+          <p onClick={() => navigate("/MyProfile")}>My profile</p>
           <p onClick={() => navigate("/FAQ")}>FAQ</p>
         </div>
       </div>
