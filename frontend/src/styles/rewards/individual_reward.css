@@ -1,0 +1,104 @@
+@import "../App.css";
+
+.individual-rewards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
+
+.individual-rewards-info-container {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
+.individual-rewards-info-container h2 {
+  margin-block-start: 0em;
+  margin-block-end: 0.2em;
+  font-family: var(--inter-font);
+  color: var(--background3);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.reward-stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+}
+
+.reward-stars img {
+  height: 9.618690490722656px;
+  width: 9.66956615447998px;
+  left: 11.57861328125px;
+  top: 2.41552734375px;
+  border-radius: 0px;
+  margin-bottom: 2px;
+}
+
+.reward-stars p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  font-family: var(--inter-font);
+  color: #e80f5d;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.reward-line {
+  border: 1px solid #f0694f;
+}
+
+.reward-text{
+    display: flex;
+    width: 100%;
+}
+
+.reward-text p {
+  font-family: var(--inter-font);
+  color: var(--background3);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.button-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+}
+
+.button-rewards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-rewards p {
+  font-family: var(--inter-font);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.button-rewards img {
+  height: 9.618690490722656px;
+  width: 9.66956615447998px;
+  left: 11.57861328125px;
+  top: 2.41552734375px;
+  border-radius: 0px;
+  margin-bottom: 2px;
+}

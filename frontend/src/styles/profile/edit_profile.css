@@ -1,0 +1,192 @@
+@import "../App.css";
+
+.edit-profile-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-profile-avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+}
+
+.edit-profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.change-photo-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.change-photo-container p {
+  font-family: var(--inter-font);
+  color: var(--background3);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.edit-profile-information-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 4vh;
+}
+
+.edit-profile-information-container p {
+  font-family: var(--inter-font);
+  color: #f0694f99;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.edit-profile-line {
+  border: 1px solid rgba(240, 105, 79, 0.7);
+  margin-top: 1vh;
+}
+
+.edit-profile-container input {
+  text-align: left;
+  font-family: var(--inter-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #f0694f;
+  width: calc(100% - 2px);
+}
+
+.edit-name-container input::placeholder {
+  text-align: left;
+  color: #f0694f;
+  display: flex;
+}
+
+.edit-current-city input::placeholder {
+  text-align: left;
+  color: #f0694f;
+  display: flex;
+}
+
+.edit-bio {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-bio p {
+  font-weight: bold;
+}
+
+.input-container{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  overflow: auto;
+  min-height: 15vh;
+}
+
+.input-container input {
+  width: 100%;
+  height: auto;
+  color: #f0694f;
+  font-family: var(--inter-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  border: none;
+}
+
+.input-container input::placeholder{
+  text-align: left;
+  color: #f0694f;
+  white-space: pre-wrap;
+}
+
+
+
+
+.edit-city-circle {
+  border: 1px solid #f0694f;
+  border-radius: 70px;
+  height: 25px;
+  width: max-content;
+  display: grid;
+  grid-template-columns: 4vh auto;
+  align-items: center;
+}
+
+.edit-city-circle p {
+  font-family: var(--inter-font);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  display: flex;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-right: 2vh;
+}
+
+#xVector {
+  display: flex;
+  height: 16px;
+  width: 16px;
+  border-radius: 0px;
+  justify-content: flex-start;
+  color: #ffabab;
+  justify-self: center;
+}
+
+.edit-cities-gap-between {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.edit-preference-circle {
+  border: 1px solid #f0694f;
+  border-radius: 70px;
+  height: 25px;
+  width: max-content;
+  display: grid;
+  grid-template-columns: 4vh 2.9vh auto;
+  align-items: center;
+}
+
+.edit-preference-circle p {
+  font-family: var(--inter-font);
+  color: var(--background3);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+  display: flex;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-right: 2vh;
+}
+
+

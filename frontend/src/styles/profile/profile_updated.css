@@ -1,0 +1,17 @@
+@import "../App.css";
+
+.profile-updated-text{
+    display: flex;
+    justify-content: center;
+}
+
+.profile-updated-text h2 {
+  text-align: center;
+  font-family: var(--inter-font);
+  color: var(--background3);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: 0em;
+  text-align: center;
+}

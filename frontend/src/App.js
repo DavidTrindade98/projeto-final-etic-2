@@ -18,6 +18,11 @@ import ChatPage from './pages/chat/ChatPage';
 import MessagesPage from './pages/chat/MessagesPage';
 import PersonDetails from './pages/chat/PersonDetails';
 import MyProfile from './pages/profile/MyProfile';
+import EditProfile from './pages/profile/EditProfile';
+import ProfileUpdated from './pages/profile/ProfileUpdated';
+import GetRewards from './pages/rewards/GetRewards';
+import IndividualReward from './pages/rewards/IndividualReward';
+import RewardSuccess from './pages/rewards/RewardSuccess';
 
 
 function App() {
@@ -46,6 +51,11 @@ function App() {
         <Route path="/Chat/Messages" element={<MessagesPage/>} />
         <Route path="/Chat/PersonDetails" element={<PersonDetails/>} />
         <Route path="/MyProfile" element={<MyProfile />} />
+        <Route path="/EditProfile" element={<EditProfile />} />
+        <Route path="/ProfileUpdated" element={<ProfileUpdated />} />
+        <Route path="/GetRewards" element={<GetRewards />} />
+        <Route path="/IndividualReward" element={<IndividualReward />} />
+        <Route path="/RewardSuccess" element={<RewardSuccess />} />
     </Routes>
   );
 }

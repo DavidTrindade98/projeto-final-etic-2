@@ -57,7 +57,7 @@ export default function MyProfile() {
             </div>
           </div>
           <div className="myprofile-links-container">
-            <p onClick={() => navigate("/Rewards")}>Get Rewards</p>
+            <p onClick={() => navigate("/GetRewards")}>Get Rewards</p>
             <p onClick={() => navigate("/SavedRewards")}>Saved rewards</p>
             <p onClick={() => navigate("/EditProfile")}>Edit Profile</p>
             <p onClick={() => navigate("/Login")}>Log out</p>
