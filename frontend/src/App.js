@@ -23,6 +23,7 @@ import ProfileUpdated from './pages/profile/ProfileUpdated';
 import GetRewards from './pages/rewards/GetRewards';
 import IndividualReward from './pages/rewards/IndividualReward';
 import RewardSuccess from './pages/rewards/RewardSuccess';
+import FAQ from './pages/faq/FAQ';
 
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
         <Route path="/GetRewards" element={<GetRewards />} />
         <Route path="/IndividualReward" element={<IndividualReward />} />
         <Route path="/RewardSuccess" element={<RewardSuccess />} />
+        <Route path="/FAQ" element={<FAQ />} />
     </Routes>
   );
 }

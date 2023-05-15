@@ -77,7 +77,7 @@ export default function ProfileUpdated() {
                 fontWeight: "400",
               }}
               buttonStyle2={{ border: "2px solid #F0694F" }}
-              buttonOnClick={() => navigate("/ProfileUpdated")}
+              buttonOnClick={() => navigate("/MyProfile")}
             />
         </div>
       </wrapper-chat>
