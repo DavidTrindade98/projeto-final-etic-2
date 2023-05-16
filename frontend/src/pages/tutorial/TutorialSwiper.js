@@ -23,6 +23,7 @@ export default function TutorialSwiper() {
   return (
     <div className="TutorialSwiper">
       <Swiper
+      prevButton=".my-prev-button"
         style={{
           "--swiper-navigation-size": "",
           "--swiper-navigation-color": "transparent",

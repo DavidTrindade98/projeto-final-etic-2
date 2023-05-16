@@ -8,6 +8,6 @@ WORKDIR /workspace
 
 COPY . .
 
-#RUN poetry install
+RUN poetry install
 
-#CMD [ "uvicorn", "src.main:api", "--host", "0.0.0.0" ]
+CMD [ "uvicorn", "src.main:api", "--host", "0.0.0.0" ]

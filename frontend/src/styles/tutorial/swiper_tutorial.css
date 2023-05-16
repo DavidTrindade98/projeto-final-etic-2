@@ -1,52 +1,41 @@
 @import "../App.css";
 
-
-/* Set up the swiper container */
-.swiper-container {
+.swiper-container-tutorial {
   display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  width: 100%;
+  flex-direction: column;
   height: 100vh;
+  background: linear-gradient(
+    180deg,
+    #ea4f32 0%,
+    #f06b52 0.01%,
+    #f45033 0.02%,
+    #e80f5d 100%
+  );
 }
 
-/* Set up the swiper pages */
-.swiper-page {
-  scroll-snap-align: start;
-  flex-shrink: 0;
-  width: 100%;
-  height: 100%;
+.swiper-page{
+  scroll-snap-type: x mandatory;
+}
+
+.swiper-wrapper-tutorial {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 5rem;
-}
-
-/* Set up the dots container */
-.swiper-dots {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-/* Set up the dots */
-.swiper-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  margin: 0 0.5rem;
-  background-color: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
-
-/* Set the active dot */
-.swiper-dot.active {
-  background-color: #ffffff;
-}
-
-/* Set the scroll behavior for clicking on a dot */
-.swiper-dot:focus {
+  flex-wrap: nowrap;
   scroll-snap-align: center;
 }
+
+.swiper-slide-tutorial {
+  width: 100%;
+  min-width: 100vw; /* optional - makes sure each slide takes up the full width of the viewport */
+  padding: 1rem;
+  scroll-snap-align: center;
+}
+
+.my-prev-button {
+  display: flex;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+/* Define the CSS styles for the button inside the previous button */
+

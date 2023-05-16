@@ -138,3 +138,11 @@ span[slot="container-start"] {
   letter-spacing: 0em;
   text-align: left;
 }
+
+
+.my-prev-button {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
