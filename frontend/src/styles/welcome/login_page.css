@@ -50,3 +50,29 @@
   text-align: center;
   color: #ffabab;
 }
+
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-toggle-button {
+  position: absolute;
+  right: 10px; /* Adjust the value as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#Password{
+  width: 100%;
+}
+
+#eye {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 1vh;
+}
+

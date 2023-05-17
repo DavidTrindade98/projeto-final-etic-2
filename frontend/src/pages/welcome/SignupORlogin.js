@@ -11,24 +11,66 @@ import google from "../../assets/google.svg";
 import apple from "../../assets/apple.svg";
 import { useNavigate } from "react-router-dom";
 import TopContainer from "../../components/TopContainer";
+import { useEffect } from "react";
+import eye_open from "../../assets/eye_open.svg";
+import eye_closed from "../../assets/eye_closed.svg";
 
 export default function SignupORloginPage() {
-  const [isClicked, notClicked] = useState(true);
-  function Clicked() {
-    notClicked(!isClicked);
-  }
+  const [isClicked, setIsClicked] = useState(true);
+  const [clickCount, setClickCount] = useState(0);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isBackButtonClicked, setIsBackButtonClicked] = useState(false);
+
+  const handleBackClick = () => {
+    if (!isSubmitting) {
+      setIsClicked(true); // Hide the content on back click if not submitting
+      setIsBackButtonClicked(true); // Set the flag for back button clicked
+    }
+  };
+
+  const handleClick = () => {
+    if (clickCount === 0) {
+      setIsClicked(false); // Open the menu on the first click
+    } else {
+      setIsSubmitting(true); // Submit the form on subsequent clicks
+    }
+  };
 
   const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Perform form submission logic here
+    setIsSubmitting(false);
+    setClickCount((prevCount) => prevCount + 1); // Update the click count after form submission
+  };
+
+  useEffect(() => {
+    if (isBackButtonClicked) {
+      setClickCount(0); // Reset the click count when the back button is clicked
+      setIsBackButtonClicked(false); // Reset the back button clicked flag
+    }
+  }, [isBackButtonClicked]);
+
+  const [isPasswordVisible, setPasswordVisible] = useState(false);
+
+  const handleTogglePassword = (e) => {
+    e.preventDefault();
+    setPasswordVisible((prevState) => !prevState);
+  };
 
   return (
     <default-screen>
       <wrapper-screen>
-        <TopContainer topContainerStyle={{ visibility: "hidden" }} backButtonFill="white" />
+        <TopContainer
+          topContainerStyle={{ visibility: "hidden" }}
+          backButtonFill="white"
+        />
         <img
           src={back}
           id={isClicked ? "logo-back-hide" : "logo-back-show"}
           alt="logo-back"
-          onClick={Clicked}
+          onClick={() => handleBackClick()}
         />
         <div className="logo-container">
           <img src={logo} id="logo" alt="logo" />
@@ -49,13 +91,28 @@ export default function SignupORloginPage() {
           </div>
 
           <form
-            className={
-              isClicked ? "form-container-hide" : "form-container"
-            }
+            className={isClicked ? "form-container-hide" : "form-container"}
+            onSubmit={handleSubmit}
           >
             <input type="name" id="Name" placeholder="Name" />
             <input type="email" id="E-mail" placeholder="E-mail" />
-            <input type="password" id="Password" placeholder="Password" />
+            <div className="password-input-container">
+              <input
+                type={isPasswordVisible ? "text" : "password"}
+                id="Password"
+                placeholder="Password"
+              />
+              <div
+                className="password-toggle-button"
+                onClick={handleTogglePassword}
+              >
+                {isPasswordVisible ? (
+                  <img src={eye_open} alt="Eye Open" id="eye" />
+                ) : (
+                  <img src={eye_closed} alt="Eye Close" id="eye" />
+                )}
+              </div>
+            </div>
           </form>
 
           <div className="buttons-container">
@@ -63,10 +120,8 @@ export default function SignupORloginPage() {
               className={
                 isClicked ? "signup-button-show" : "signup-button-hide"
               }
-              onClick={() => {
-                Clicked();
-                notClicked();
-              }}
+              onClick={handleClick}
+              disabled={isSubmitting}
             >
               <text id="signup_text">Sign up</text>
             </button>
