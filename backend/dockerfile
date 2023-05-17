@@ -10,4 +10,4 @@ COPY . .
 
 RUN poetry install
 
-CMD [ "uvicorn", "src.main:api", "--host", "0.0.0.0" ]
+CMD [ "uvicorn", "src.main:app", "--host", "0.0.0.0" ]

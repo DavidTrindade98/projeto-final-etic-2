@@ -95,11 +95,11 @@ export default function SignupORloginPage() {
             onSubmit={handleSubmit}
           >
             <input type="name" id="Name" placeholder="Name" />
-            <input type="email" id="E-mail" placeholder="E-mail" />
+            <input type="email" id="email" placeholder="E-mail" />
             <div className="password-input-container">
               <input
                 type={isPasswordVisible ? "text" : "password"}
-                id="Password"
+                id="password"
                 placeholder="Password"
               />
               <div
