@@ -49,3 +49,18 @@
   align-items: center;
   gap: 10vw;
 }
+
+.error-message p{
+  display: flex;
+  font-family: var(--inter-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--background2);
+  animation: fadeIn 8s;
+  -webkit-animation: fadeIn 800ms;
+  margin-block-start: 0.1em;
+  margin-block-end: 0em;
+  text-align: center;
+  justify-content: center;
+}

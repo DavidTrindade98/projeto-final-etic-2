@@ -14,10 +14,49 @@ export default function Signup() {
   const navigate = useNavigate();
 
   const [isPasswordVisible, setPasswordVisible] = useState(false);
+  const [error, setError] = useState("");
 
   const handleTogglePassword = (e) => {
     e.preventDefault();
     setPasswordVisible((prevState) => !prevState);
+  };
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const validateEmail = (email) => {
+    // Regular expression to validate email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const handleSignup = (e) => {
+    e.preventDefault();
+    if (!validateEmail(email)) {
+      setError("Please enter a valid email address");
+      return;
+    }
+
+    fetch("http://localhost:8000/request/register/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, email, password }),
+    })
+      .then((response) => {
+        if (response.ok) {
+          // Signup successful, navigate to another page
+          navigate("/TutorialSwiper"); // Replace "/success-page" with your desired path
+        } else {
+          // Signup failed, display error message
+          throw new Error("Registration failed");
+        }
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
   };
 
   return (
@@ -32,16 +71,32 @@ export default function Signup() {
         </div>
         <div className="signup">
           <div className="welcome-text-container">
-            <h1>Sign up<br></br>with e-mail</h1>
+            <h1>
+              Sign up<br></br>with e-mail
+            </h1>
           </div>
-          <form className="form-container" onSubmit={""}>
-            <input type="name" id="Name" placeholder="Name" />
-            <input type="email" id="email" placeholder="E-mail" />
+          <form className="form-container" onSubmit={handleSignup}>
+            <input
+              type="name"
+              id="name"
+              placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <input
+              type="email"
+              id="email"
+              placeholder="E-mail"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
             <div className="password-input-container">
               <input
                 type={isPasswordVisible ? "text" : "password"}
                 id="password"
                 placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
               <div
                 className="password-toggle-button"
@@ -54,10 +109,17 @@ export default function Signup() {
                 )}
               </div>
             </div>
+            <div className="error-message">
+            {error && <p>{error}</p>}
+            </div>
           </form>
-
+        
           <div className="buttons-container">
-            <Button buttonTextHolder={"Sign up"} />
+            <Button
+              buttonTextHolder={"Sign up"}
+              buttonType={"submit"}
+              buttonOnClick={handleSignup}
+            />
             <div className="socials-signup-show">
               <p id="text-using-socials">or sign up using:</p>
               <div className="socials-logos">

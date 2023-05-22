@@ -15,10 +15,39 @@ export default function Login() {
   const navigate = useNavigate();
 
   const [isPasswordVisible, setPasswordVisible] = useState(false);
+  const [error, setError] = useState("");
 
   const handleTogglePassword = (e) => {
     e.preventDefault();
     setPasswordVisible((prevState) => !prevState);
+  };
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    const email = document.getElementById("E-mail").value;
+    const password = document.getElementById("password").value;
+
+    // Make an API request to authenticate the user
+    fetch("http://localhost:8000/request/login/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, password }),
+    })
+      .then((response) => {
+        if (response.ok) {
+          // Signup successful, navigate to another page
+          navigate("/TutorialSwiper"); // Replace "/success-page" with your desired path
+        } else {
+          // Signup failed, display error message
+          throw new Error("Login failed");
+        }
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
   };
 
   return (
@@ -34,11 +63,9 @@ export default function Login() {
         </div>
         <div className="login">
           <div className="welcome-text-container">
-            <h1>
-              Log in
-            </h1>
-            </div>
-          <form className="form-container">
+            <h1>Log in</h1>
+          </div>
+          <form className="form-container" onSubmit={handleLogin}>
             <input type="email" id="E-mail" placeholder="E-mail" />
             <div className="password-input-container">
               <input
@@ -57,9 +84,10 @@ export default function Login() {
                 )}
               </div>
             </div>
+            <div className="error-message">{error && <p>{error}</p>}</div>
           </form>
           <div className="buttons-container">
-            <Button buttonTextHolder={"Login"} />
+            <Button buttonTextHolder={"Login"} buttonOnClick={handleLogin} />
             <div className="socials-container">
               <p id="text-using-socials">or login with:</p>
               <div className="socials-logos">
