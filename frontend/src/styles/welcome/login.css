@@ -1,6 +1,6 @@
 @import "../App.css";
 
-.login-page {
+.login {
   display: flex;
   flex-direction: column;
   gap: 34px;

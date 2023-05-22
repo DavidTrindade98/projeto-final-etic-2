@@ -6,7 +6,7 @@ export default function FirstPage() {
   const navigate = useNavigate();
 
   return (
-    <div className="first-page" onClick={() => navigate("/SignupOrLogin")}>
+    <div className="first-page" onClick={() => navigate("/LoginOrSignup")}>
       <div className="logo-slogan">
         <img src={logo} id="logo" alt="logo" />
         <p>Live it like the Locals</p>

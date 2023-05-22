@@ -1,17 +1,16 @@
-import "../../styles/welcome/login.css";
-import "../../styles/welcome/login_or_signup.css";
-import TopContainer from "../../components/TopContainer";
-import Button from "../../components/Button";
+import { useState } from "react";
+import "../../styles/welcome/signup.css";
 import logo from "../../assets/logo.svg";
 import facebook from "../../assets/facebook.svg";
 import google from "../../assets/google.svg";
 import apple from "../../assets/apple.svg";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import TopContainer from "../../components/TopContainer";
 import eye_open from "../../assets/eye_open.svg";
 import eye_closed from "../../assets/eye_closed.svg";
+import Button from "../../components/Button";
 
-export default function Login() {
+export default function Signup() {
   const navigate = useNavigate();
 
   const [isPasswordVisible, setPasswordVisible] = useState(false);
@@ -25,21 +24,19 @@ export default function Login() {
     <default-screen>
       <wrapper-screen>
         <TopContainer
-          logoStyle={{ display: "none" }}
           backButtonFill="white"
           backClick={() => navigate("/LoginORSignup")}
         />
         <div className="logo-container">
           <img src={logo} id="logo" alt="logo" />
         </div>
-        <div className="login">
+        <div className="signup">
           <div className="welcome-text-container">
-            <h1>
-              Log in
-            </h1>
-            </div>
-          <form className="form-container">
-            <input type="email" id="E-mail" placeholder="E-mail" />
+            <h1>Sign up<br></br>with e-mail</h1>
+          </div>
+          <form className="form-container" onSubmit={""}>
+            <input type="name" id="Name" placeholder="Name" />
+            <input type="email" id="email" placeholder="E-mail" />
             <div className="password-input-container">
               <input
                 type={isPasswordVisible ? "text" : "password"}
@@ -58,10 +55,11 @@ export default function Login() {
               </div>
             </div>
           </form>
+
           <div className="buttons-container">
-            <Button buttonTextHolder={"Login"} />
-            <div className="socials-container">
-              <p id="text-using-socials">or login with:</p>
+            <Button buttonTextHolder={"Sign up"} />
+            <div className="socials-signup-show">
+              <p id="text-using-socials">or sign up using:</p>
               <div className="socials-logos">
                 <img src={facebook} alt="facebook" />
                 <img src={google} alt="google" />

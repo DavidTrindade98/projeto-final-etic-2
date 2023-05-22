@@ -2,7 +2,8 @@ import './styles/App.css';
 import { Routes, Route} from 'react-router-dom';
  
 import FirstPage from './pages/welcome/FirstPage';
-import SignupORlogin from './pages/welcome/SignupORlogin';
+import LoginOrSignup from './pages/welcome/LoginOrSignup';
+import Signup from './pages/welcome/Signup';
 import Login from './pages/welcome/Login';
 import TutorialSwiper from './pages/tutorial/TutorialSwiper';
 import Questionnaire1 from './pages/questionnaire/Questionnaire1';
@@ -26,11 +27,13 @@ import RewardSuccess from './pages/rewards/RewardSuccess';
 import FAQ from './pages/faq/FAQ';
 
 
+
 function App() {
   return (
     <Routes>
         <Route path="/" element={<FirstPage />} />
-        <Route path="/SignupORlogin" element={<SignupORlogin />} />
+        <Route path="/LoginORSignup" element={<LoginOrSignup />} />
+        <Route path="/Signup" element={<Signup />} />
         <Route path="Login" element={<Login />} />
         <Route path="/TutorialSwiper" element={<TutorialSwiper/>}>
           <Route path="/TutorialSwiper/1" element={<TutorialSwiper/>} />
