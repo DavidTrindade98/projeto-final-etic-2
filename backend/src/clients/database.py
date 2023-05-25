@@ -29,25 +29,21 @@ def get_user_by_email(email: str) -> User:
     
     return user
 
-def submit_questionnaire(questionnaire_data: UserQuestionnaire, user: User, session: Session):
-    questionnaire = UserQuestionnaireData(
-        age=questionnaire_data.age,
-        gender=questionnaire_data.gender,
-        live_in=questionnaire_data.live_in,
-        user_email=user.email
-    )
+def submit_questionnaire(questionnaire_data: UserQuestionnaire):
+    with Session(engine) as session:
+        questionnaire = UserQuestionnaireData(age=questionnaire_data.age,gender=questionnaire_data.gender,live_in=questionnaire_data.live_in)
 
-    for city_name in questionnaire_data.city_advice:
-        city = session.query(Cities).filter(Cities.name == city_name).first()
-        if city:
-            city_advice = UserCities(city=city, user_email=user.email)
-            session.add(city_advice)
+        for city_name in questionnaire_data.city_advice:
+            city = session.query(Cities).filter(Cities.name == city_name).first()
+            if city:
+                city_advice = UserCities(city=city)
+                session.add(city_advice)
 
-    for experience_name in questionnaire_data.experiences:
-        experience = session.query(Experiences).filter(Experiences.name == experience_name).first()
-        if experience:
-            user_experience = UserExperiences(experience=experience, user_email=user.email)
-            session.add(user_experience)
+        for experience_name in questionnaire_data.experiences:
+            experience = session.query(Experiences).filter(Experiences.name == experience_name).first()
+            if experience:
+                user_experience = UserExperiences(experience=experience)
+                session.add(user_experience)
 
     session.add(questionnaire)
     session.commit()

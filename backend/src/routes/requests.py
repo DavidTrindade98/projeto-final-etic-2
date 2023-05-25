@@ -22,12 +22,12 @@ async def login_endpoint(user_login_api_model: UserLogin, response: Response):
     except Exception as exc:
         response.status_code = status.HTTP_400_BAD_REQUEST
         return str(exc)
-    
+
 @router.post("/questionnaire", status_code=status.HTTP_201_CREATED)
-async def submit_questionnaire_endpoint(user_create_api_model: UserCreate, questionnaire_data: UserQuestionnaire, response: Response):
+async def submit_questionnaire_endpoint(questionnaire_data: UserQuestionnaire, response: Response):
     try:
-        RequestLogic.submit_user_questionnaire(questionnaire_data, user_create_api_model.email)
+        RequestLogic.submit_user_questionnaire(questionnaire_data=questionnaire_data)
         return {"detail": "Questionnaire submitted successfully"}
     except Exception as exc:
         response.status_code = status.HTTP_400_BAD_REQUEST
-        return str(exc)
+        return str

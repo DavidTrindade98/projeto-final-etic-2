@@ -13,6 +13,12 @@ class User(BaseDatabaseModel):
     name = Column(String(255))
     hashed_password = Column(String(255))
 
+    #questoinneire = relationship(...)
+    #advices_in = 
+#user = get_user()
+#user.questionnaire.question1 = "bla"
+#user.save()
+
 class Cities(BaseDatabaseModel):
     __tablename__ = "cities"
     id = Column(Integer, primary_key=True)
@@ -43,8 +49,5 @@ class UserQuestionnaireData(BaseDatabaseModel):
     live_in = Column(String(255))
     city_advice_id = Column(Integer, ForeignKey("cities.id"))
     experiences_id = Column(Integer, ForeignKey("experiences.id"))
-
-    city_advice = relationship("Cities", foreign_keys=[city_advice_id])
-    experiences = relationship("Experiences", foreign_keys=[experiences_id])
 
 BaseDatabaseModel.metadata.create_all(engine, checkfirst=True)
