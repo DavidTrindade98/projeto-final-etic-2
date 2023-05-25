@@ -13,20 +13,6 @@ class User(BaseDatabaseModel):
     name = Column(String(255))
     hashed_password = Column(String(255))
 
-    age = Column(String(255))
-    gender = Column(String(255))
-    live_in = Column(String(255))
-
-class UserCities(BaseDatabaseModel):
-    __tablename__ = "user_cities"
-    user_email = Column(String(255), ForeignKey("users.email"), primary_key=True)
-    city = Column(String(255),primary_key=True)
-
-class UserExperiences(BaseDatabaseModel):
-    __tablename__ = "user_experiences"
-    user_email = Column(String(255), ForeignKey("users.email"),primary_key=True)
-    experiences = Column(String(255),primary_key=True)
-
 class Cities(BaseDatabaseModel):
     __tablename__ = "cities"
     id = Column(Integer, primary_key=True)
@@ -37,4 +23,28 @@ class Experiences(BaseDatabaseModel):
     id = Column(Integer, primary_key=True)
     name = Column(String(255))
 
-BaseDatabaseModel.metadata.create_all(engine)
+class UserCities(BaseDatabaseModel):
+    __tablename__ = "user_cities"
+    id = Column(Integer, primary_key=True)
+    user_email = Column(String(255), ForeignKey("users.email"))
+    city_advice = Column(Integer, ForeignKey("cities.id"))
+
+class UserExperiences(BaseDatabaseModel):
+    __tablename__ = "user_experiences"
+    id = Column(Integer, primary_key=True)
+    user_email = Column(String(255), ForeignKey("users.email"))
+    experiences_id = Column(Integer, ForeignKey("experiences.id"))
+    
+class UserQuestionnaireData(BaseDatabaseModel):
+    __tablename__ = "user_questionnaire_data"
+    user_email = Column(String(255), ForeignKey("users.email"), primary_key=True)
+    age = Column(String(255))
+    gender = Column(String(255))
+    live_in = Column(String(255))
+    city_advice_id = Column(Integer, ForeignKey("cities.id"))
+    experiences_id = Column(Integer, ForeignKey("experiences.id"))
+
+    city_advice = relationship("Cities", foreign_keys=[city_advice_id])
+    experiences = relationship("Experiences", foreign_keys=[experiences_id])
+
+BaseDatabaseModel.metadata.create_all(engine, checkfirst=True)

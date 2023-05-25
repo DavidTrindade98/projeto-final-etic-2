@@ -1,6 +1,6 @@
-from src.models.user_model import User
+from src.models.user_model import User, Cities, Experiences, UserQuestionnaireData, UserCities, UserExperiences
 from src.models.user_model import engine
-from src.models.api import UserCreate, UserLogin
+from src.models.api import UserCreate, UserLogin, UserQuestionnaire
 from sqlalchemy.orm import Session
 from sqlalchemy import select
 from fastapi import HTTPException
@@ -29,9 +29,28 @@ def get_user_by_email(email: str) -> User:
     
     return user
 
+def submit_questionnaire(questionnaire_data: UserQuestionnaire, user: User, session: Session):
+    questionnaire = UserQuestionnaireData(
+        age=questionnaire_data.age,
+        gender=questionnaire_data.gender,
+        live_in=questionnaire_data.live_in,
+        user_email=user.email
+    )
 
+    for city_name in questionnaire_data.city_advice:
+        city = session.query(Cities).filter(Cities.name == city_name).first()
+        if city:
+            city_advice = UserCities(city=city, user_email=user.email)
+            session.add(city_advice)
 
+    for experience_name in questionnaire_data.experiences:
+        experience = session.query(Experiences).filter(Experiences.name == experience_name).first()
+        if experience:
+            user_experience = UserExperiences(experience=experience, user_email=user.email)
+            session.add(user_experience)
 
+    session.add(questionnaire)
+    session.commit()
 
 
 
