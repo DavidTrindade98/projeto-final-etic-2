@@ -1,4 +1,4 @@
-# FastAPI SQLAlchemy Docker React Example
+# Dankee_App
 
 This is an project demonstrating how i build a full-stack mobile application using FastAPI, SQLAlchemy, Docker, and React.
 
