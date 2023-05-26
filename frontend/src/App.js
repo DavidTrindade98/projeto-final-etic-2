@@ -25,6 +25,7 @@ import GetRewards from './pages/rewards/GetRewards';
 import IndividualReward from './pages/rewards/IndividualReward';
 import RewardSuccess from './pages/rewards/RewardSuccess';
 import FAQ from './pages/faq/FAQ';
+import { QuestionnaireProvider } from "./pages/questionnaire/QuestionnaireContext";
 
 
 
@@ -43,10 +44,10 @@ function App() {
           <Route path="/TutorialSwiper/5" element={<TutorialSwiper/>} />
         </Route>
         <Route path="/SwiperTutorial" element={<SwiperTutorial />}></Route>
-        <Route path="/Questionnaire1" element={<Questionnaire1/>}></Route>
-        <Route path="/Questionnaire2" element={<Questionnaire2/>}></Route>
-        <Route path="/Questionnaire3" element={<Questionnaire3/>}></Route>
-        <Route path="/Questionnaire4" element={<Questionnaire4/>}></Route>
+        <Route path="/Questionnaire1" element={<QuestionnaireProvider><Questionnaire1 /></QuestionnaireProvider>} />
+        <Route path="/Questionnaire2" element={<QuestionnaireProvider><Questionnaire2 /></QuestionnaireProvider>} />
+        <Route path="/Questionnaire3" element={<QuestionnaireProvider><Questionnaire3 /></QuestionnaireProvider>} />
+        <Route path="/Questionnaire4" element={<QuestionnaireProvider><Questionnaire4 /></QuestionnaireProvider>} />
         <Route path="/Questionnaire5" element={<Questionnaire5/>}></Route>
         <Route path="/LocalsSearch" element={<LocalsSearch />}></Route>
         <Route path="/FilterOverlay" element={<FilterMenu />}></Route>

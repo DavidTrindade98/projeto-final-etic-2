@@ -1,6 +1,6 @@
 from src.clients import database
 from fastapi import HTTPException
-from src.models.api import UserCreate, UserLogin, UserQuestionnaire
+from src.models.api import UserCreate, UserLogin, UserProfile
 from src.routes.auth import verify_password, generate_access_token
 
 def create_register(register_api_model: UserCreate):
@@ -11,8 +11,8 @@ def login(user_login_api_model: UserLogin):
     if not user or not verify_password(user_login_api_model.password, user.hashed_password):
         raise Exception("Invalid email or password")
 
-    access_token = generate_access_token(user.email)
-    return access_token
+    token = generate_access_token(user.email)
+    return token
 
 def get_user_by_email(email: str):
     user = database.get_user_by_email(email)
@@ -20,5 +20,5 @@ def get_user_by_email(email: str):
         raise HTTPException(status_code=404, detail="User not found")
     return user
 
-def submit_user_questionnaire(questionnaire_data: UserQuestionnaire):
-    database.submit_questionnaire(questionnaire_data)
+def create_user_profile(user_profile_api_model: UserProfile):
+    database.submit_questionnaire(user_profile_api_model)
