@@ -45,4 +45,7 @@ class UserProfileDBModel(BaseDatabaseModel):
     experiences_id = Column(Integer, ForeignKey("experiences.id"))
     user = relationship("UserDBModel", back_populates="profile")
 
+    city_advice = relationship("CitiesDBModel", foreign_keys=[city_advice_id])
+    experiences = relationship("ExperiencesDBModel", foreign_keys=[experiences_id])
+
 BaseDatabaseModel.metadata.create_all(engine, checkfirst=True)

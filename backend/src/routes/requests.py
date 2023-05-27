@@ -42,8 +42,10 @@ def login(user_login_api_model: UserLogin, db: Session = Depends(get_db)):
     access_token = create_access_token(user.email)
     return {"access_token": access_token}
 
+
+#david
 @router.post("/profile/")
-def submit_questionnaire(
+def profile(
     user_profile_api_model: UserProfile,
     db: Session = Depends(get_db),
     auth: HTTPAuthorizationCredentials = Security(security)
@@ -64,36 +66,39 @@ def submit_questionnaire(
         raise HTTPException(status_code=401, detail="Invalid access token")
 
     # Retrieve city IDs based on city names
-    # Retrieve city IDs based on city names
     city_ids = []
     for city_name in user_profile_api_model.city_advice:
         city = db.query(CitiesDBModel).filter(CitiesDBModel.name == city_name).first()
         if city:
             city_ids.append(city.id)
+        else:
+            # Create a new city record if it doesn't exist
+            new_city = CitiesDBModel(name=city_name)
+            db.add(new_city)
+            db.commit()
+            city_ids.append(new_city.id)
 
-    # Retrieve experience IDs based on experience names
+    # Create or retrieve experience records and get their IDs
     experience_ids = []
     for experience_name in user_profile_api_model.experiences:
         experience = db.query(ExperiencesDBModel).filter(ExperiencesDBModel.name == experience_name).first()
         if experience:
             experience_ids.append(experience.id)
+        else:
+            # Create a new experience record if it doesn't exist
+            new_experience = ExperiencesDBModel(name=experience_name)
+            db.add(new_experience)
+            db.commit()
+            experience_ids.append(new_experience.id)
 
     db_profile = UserProfileDBModel(
         user_email=user.email,
         age=user_profile_api_model.age,
         gender=user_profile_api_model.gender,
         live_in=user_profile_api_model.live_in,
+        city_advice_id=city_ids,
+        experiences_id=experience_ids,
     )
-
-    # Assign city advice IDs
-    for city_id in city_ids:
-        user_city = UserCitiesDBModel(user_email=user.email, city_advice_id=city_id)
-        db.add(user_city)
-
-    # Assign experience IDs
-    for experience_id in experience_ids:
-        user_experience = UserExperiencesDBModel(user_email=user.email, experiences_id=experience_id)
-        db.add(user_experience)
 
     db.add(db_profile)
     db.commit()
