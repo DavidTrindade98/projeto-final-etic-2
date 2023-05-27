@@ -38,12 +38,15 @@ export default function Login() {
     })
       .then((response) => {
         if (response.ok) {
-          // Signup successful, navigate to another page
-          navigate("/TutorialSwiper"); // Replace "/success-page" with your desired path
+          return response.json();
         } else {
-          // Signup failed, display error message
           throw new Error("Login failed");
         }
+      })
+      .then((data) => {
+        const token = data.token;
+        localStorage.setItem("authenticationToken", token);
+        navigate("/TutorialSwiper");
       })
       .catch((error) => {
         setError(error.message);

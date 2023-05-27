@@ -9,7 +9,7 @@ export const QuestionnaireProvider = ({ children }) => {
 
   const submitQuestionnaireData = async (data) => {
     try {
-      const token = localStorage.getItem("your-authentication-token");
+      const token = localStorage.getItem("authenticationToken");
 
       const response = await fetch("http://localhost:8000/request/profile/", {
         method: "POST",

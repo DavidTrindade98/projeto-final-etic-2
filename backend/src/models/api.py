@@ -41,7 +41,6 @@ class UserLogin(BaseModel):
         return value
 
 class UserProfile(BaseModel):
-    email: str
     age: str
     gender: str
     live_in: str

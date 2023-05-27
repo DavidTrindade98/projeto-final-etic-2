@@ -1,7 +1,5 @@
 from fastapi import FastAPI
-from src.models import user_model
 from src.routes import requests
-from src.controllers import RequestLogic
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
