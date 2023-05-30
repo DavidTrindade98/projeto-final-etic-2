@@ -48,8 +48,13 @@ export default function Login() {
         // Redirect or perform any other necessary actions
       } else {
         const errorResponse = await response.json();
-        setError(errorResponse.error);
-        throw new Error("Login failed");
+        if (errorResponse.email) {
+          setError("Email failed");
+        } else if (errorResponse.password) {
+          setError("Password wrong");
+        } else {
+          setError("Login failed");
+        }
       }
     } catch (error) {
       // Handle network errors
@@ -98,8 +103,8 @@ export default function Login() {
                 )}
               </div>
             </div>
-            <div className="error-message">{error && <p>{error}</p>}</div>
           </form>
+          {error && <div className="error-message"><p>{error}</p></div>}
           <div className="buttons-container">
             <Button buttonTextHolder={"Login"} buttonOnClick={handleLogin} />
             <div className="socials-container">

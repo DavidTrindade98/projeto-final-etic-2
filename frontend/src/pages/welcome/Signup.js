@@ -26,7 +26,7 @@ export default function Signup() {
   const [password, setPassword] = useState("");
 
   const validateEmail = (email) => {
-    // Regular expression to validate email
+    // Expression to validate email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
@@ -48,10 +48,19 @@ export default function Signup() {
       .then((response) => {
         if (response.ok) {
           // Signup successful, navigate to another page
-          navigate("/Login"); // Replace "/success-page" with your desired path
+          navigate("/Login");
         } else {
           // Signup failed, display error message
-          throw new Error("Registration failed");
+          const errorResponse = response.json();
+          if (errorResponse.name) {
+            setError("Name failed");
+          } else if (errorResponse.email) {
+            setError("Email failed");
+          } else if (errorResponse.password) {
+            setError("Password wrong");
+          } else {
+            setError("Registration failed");
+          }
         }
       })
       .catch((error) => {
@@ -109,11 +118,8 @@ export default function Signup() {
                 )}
               </div>
             </div>
-            <div className="error-message">
-            {error && <p>{error}</p>}
-            </div>
           </form>
-        
+          {error && <div className="error-message"><p>{error}</p></div>}
           <div className="buttons-container">
             <Button
               buttonTextHolder={"Sign up"}

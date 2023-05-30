@@ -131,7 +131,10 @@ export default function TutorialSwiper() {
             Gain discounts by giving advices to visitors and get the
             unforgettable local experience while travelling!
           </p>
-          <Button buttonTextHolder="Done" buttonOnClick={<></>} />
+          <Button buttonTextHolder="Done" buttonOnClick={() => {
+                  navigate("/TutorialSwiper/5");
+                  refreshPage();
+                }} buttonStyle2={{marginTop: '4vh' }} />
         </SwiperSlide>
         <SwiperSlide data-history="5">
           <p id="tutorial_text">
@@ -143,6 +146,7 @@ export default function TutorialSwiper() {
             <p id="you_can_edit">You can edit your anwsers later.</p>
           </div>
           <Button
+            buttonStyle2={{marginTop: '3vh' }}
             buttonTextHolder="Ok"
             buttonOnClick={() => {
               navigate("/Questionnaire1/");

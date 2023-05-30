@@ -52,13 +52,12 @@ export default function Questionnaire5() {
     <default-screen>
       <wrapper-screen>
       <TopContainer backButtonFill="white" logoSmallFill="white" backClick={() => navigate("/Questionnaire4")} />
+      <p className="questionnaire-index-text" style={{marginBottom: '5vh' , marginTop: '20vh' }}>Perfect!<br></br>Let{"’"}s start!</p>
       <div className="questionnaire-container">
         <div className="questionnaire-middle-container">
           <div className="questionnaire-middle-container-text-container">
-            <p className="questionnaire-index-text">4/4</p>
-            <p className="questionnaire-question">Thank you for completing the questionnaire!</p>
           </div>
-          <Button buttonTextHolder="Submit" buttonOnClick={handleSubmit} />
+          <Button buttonTextHolder="Ok" buttonOnClick={handleSubmit} />
         </div>
       </div>
       </wrapper-screen>

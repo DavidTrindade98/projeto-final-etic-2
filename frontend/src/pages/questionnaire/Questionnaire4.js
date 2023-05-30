@@ -137,7 +137,7 @@ export default function Questionnaire4() {
               </div>
             </div>
           </div>
-          <Button buttonTextHolder="Done" buttonOnClick={handleNext} />
+          <Button buttonTextHolder="Done" buttonOnClick={handleNext} buttonStyle2={{marginBottom: '5vh' , marginTop: '5vh' }} />
         </div>
       </wrapper-screen>
     </default-screen>
