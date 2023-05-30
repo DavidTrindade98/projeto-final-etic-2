@@ -1,41 +1,30 @@
 import React, { createContext, useState } from "react";
+import "../../styles/App.css";
+import "../../styles/questionnaire/questionnaire.css";
+import "../../styles/questionnaire/questionnaire5.css";
 
 export const QuestionnaireContext = createContext();
 
 export const QuestionnaireProvider = ({ children }) => {
-  const [questionnaireData, setQuestionnaireData] = useState({
-    selectedOptions: [],
-  });
-
-  const submitQuestionnaireData = async (data) => {
-    try {
-      const token = localStorage.getItem("authenticationToken");
-
-      const response = await fetch("http://localhost:8000/request/profile/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`, // Include the token in the Authorization header
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (response.ok) {
-        console.log("Questionnaire data submitted successfully");
-      } else {
-        throw new Error("Error submitting questionnaire data");
-      }
-    } catch (error) {
-      console.error("Error submitting questionnaire data:", error);
-    }
-  };
+  const [age, setAge] = useState("");
+  const [gender, setGender] = useState("");
+  const [liveIn, setLiveIn] = useState("");
+  const [cityAdvice, setCityAdvice] = useState("");
+  const [experiences, setExperiences] = useState([]);
 
   return (
     <QuestionnaireContext.Provider
       value={{
-        questionnaireData,
-        setQuestionnaireData,
-        submitQuestionnaireData,
+        age,
+        setAge,
+        gender,
+        setGender,
+        liveIn,
+        setLiveIn,
+        cityAdvice,
+        setCityAdvice,
+        experiences,
+        setExperiences,
       }}
     >
       {children}

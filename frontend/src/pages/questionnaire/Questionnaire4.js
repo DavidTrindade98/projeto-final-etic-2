@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import "../../styles/questionnaire/questionnaire.css";
+import React, { useContext, useState } from "react";
 import QuestionnaireSquare from "../../components/QuestionnaireSquare";
 import Party from "../../assets/party.svg";
 import Buildings from "../../assets/buildings.svg";
@@ -15,37 +14,32 @@ import Button from "../../components/Button";
 import { useNavigate } from "react-router-dom";
 import TopContainer from "../../components/TopContainer";
 import { QuestionnaireContext } from "./QuestionnaireContext";
+import "../../styles/questionnaire/questionnaire.css";
+import "../../styles/App.css";
 
 export default function Questionnaire4() {
   const navigate = useNavigate();
-  const { questionnaireData, setQuestionnaireData, submitQuestionnaireData } = useContext(QuestionnaireContext);
+  const { setExperiences } = useContext(QuestionnaireContext);
+  const [selectedExperiences, setSelectedExperiences] = useState([]);
 
-  const handleOptionSelection = (option) => {
-    if (questionnaireData.selectedOptions.includes(option)) {
-      setQuestionnaireData({
-        ...questionnaireData,
-        selectedOptions: questionnaireData.selectedOptions.filter(
-          (item) => item !== option
-        ),
-      });
-    } else {
-      setQuestionnaireData({
-        ...questionnaireData,
-        selectedOptions: [...questionnaireData.selectedOptions, option],
-      });
-    }
+  const handleExperienceClick = (experience) => {
+    setSelectedExperiences((prevExperiences) => {
+      if (prevExperiences.includes(experience)) {
+        // Remove the experience if it's already selected
+        return prevExperiences.filter((exp) => exp !== experience);
+      } else {
+        // Add the experience if it's not selected
+        return [...prevExperiences, experience];
+      }
+    });
   };
 
-  const handleNext = async () => {
-    try {
-      await submitQuestionnaireData(questionnaireData);
+  const handleNext = () => {
+    // Save the selected experiences to the context
+    setExperiences(selectedExperiences);
 
-      // Navigate to the final page
-      navigate("/Questionnaire5/");
-    } catch (error) {
-      // Handle error if submitting the questionnaire data fails
-      console.error("Error submitting questionnaire data:", error);
-    }
+    // Navigate to the next questionnaire page
+    navigate("/Questionnaire5");
   };
 
   return (
@@ -56,92 +50,94 @@ export default function Questionnaire4() {
           logoSmallFill="white"
           backClick={() => navigate("/Questionnaire3")}
         />
-        <div className="questionnaire_container">
-          <div className="questionnaire_middle_container">
-            <div className="questionnaire_middle_container_text_container">
-              <p id="questionnaire_index_text">{"4/4"}</p>
-              <p id="questionnaire_question">
-                {"Travel experience preferences:"}
+        <div className="questionnaire-container">
+          <div className="questionnaire-middle-container">
+            <div className="questionnaire-middle-container-text-container">
+              <p className="questionnaire-index-text">4/4</p>
+              <p className="questionnaire-question">
+                Travel experience preferences:
               </p>
             </div>
-            <div className="questionnaire_options_container">
-              <div className="questionnaire_option">
+            <div className="questionnaire-options-container">
+              <div className="questionnaire-option">
                 <QuestionnaireSquare
                   questionnaireBoxImage={Party}
-                  questionnaireBoxText={"Party"}
-                  questionnaireBoxClick={() => handleOptionSelection("Party")}
+                  questionnaireBoxText="Party"
+                  questionnaireBoxClick={() => handleExperienceClick("Party")}
                 />
               </div>
-              <div className="questionnaire_option">
+              <div className="questionnaire-option">
                 <QuestionnaireSquare
                   questionnaireBoxImage={Buildings}
-                  questionnaireBoxText={"Signtseeing"}
-                  questionnaireBoxClick={() => handleOptionSelection("Signtseeing")}
+                  questionnaireBoxText="Signtseeing"
+                  questionnaireBoxClick={() =>
+                    handleExperienceClick("Signtseeing")
+                  }
                 />
               </div>
-              <div className="questionnaire_option">
+              <div className="questionnaire-option">
                 <QuestionnaireSquare
                   questionnaireBoxImage={Art}
-                  questionnaireBoxText={"Art"}
-                  questionnaireBoxClick={() => handleOptionSelection("Art")}
+                  questionnaireBoxText="Art"
+                  questionnaireBoxClick={() => handleExperienceClick("Art")}
                 />
               </div>
-              <div className="questionnaire_option">
+              <div className="questionnaire-option">
                 <QuestionnaireSquare
                   questionnaireBoxImage={History}
-                  questionnaireBoxText={"History"}
-                  questionnaireBoxClick={() => handleOptionSelection("History")}
+                  questionnaireBoxText="History"
+                  questionnaireBoxClick={() => handleExperienceClick("History")}
                 />
               </div>
-              <div className="questionnaire_option">
+              <div className="questionnaire-option">
                 <QuestionnaireSquare
                   questionnaireBoxImage={Music}
-                  questionnaireBoxText={"Music"}
-                  questionnaireBoxClick={() => handleOptionSelection("Music")}
+                  questionnaireBoxText="Music"
+                  questionnaireBoxClick={() => handleExperienceClick("Music")}
                 />
               </div>
-              <div className="questionnaire_option">
+              <div className="questionnaire-option">
                 <QuestionnaireSquare
                   questionnaireBoxImage={Sports}
-                  questionnaireBoxText={"Sports"}
-                  questionnaireBoxClick={() => handleOptionSelection("Sports")}
+                  questionnaireBoxText="Sports"
+                  questionnaireBoxClick={() => handleExperienceClick("Sports")}
                 />
               </div>
-              <div className="questionnaire_option">
+              <div className="questionnaire-option">
                 <QuestionnaireSquare
                   questionnaireBoxImage={Adventure}
-                  questionnaireBoxText={"Adventure"}
-                  questionnaireBoxClick={() => handleOptionSelection("Adventure")}
+                  questionnaireBoxText="Adventure"
+                  questionnaireBoxClick={() =>
+                    handleExperienceClick("Adventure")
+                  }
                 />
               </div>
-              <div className="questionnaire_option">
+              <div className="questionnaire-option">
                 <QuestionnaireSquare
                   questionnaireBoxImage={Spiritual}
-                  questionnaireBoxText={"Spiritual"}
-                  questionnaireBoxClick={() => handleOptionSelection("Spiritual")}
+                  questionnaireBoxText="Spiritual"
+                  questionnaireBoxClick={() =>
+                    handleExperienceClick("Spiritual")
+                  }
                 />
               </div>
-              <div className="questionnaire_option">
+              <div className="questionnaire-option">
                 <QuestionnaireSquare
                   questionnaireBoxImage={Nature}
-                  questionnaireBoxText={"Nature"}
-                  questionnaireBoxClick={() => handleOptionSelection("Nature")}
+                  questionnaireBoxText="Nature"
+                  questionnaireBoxClick={() => handleExperienceClick("Nature")}
                 />
               </div>
-              <div className="questionnaire_option">
+              <div className="questionnaire-option">
                 <QuestionnaireSquare
                   questionnaireBoxImage={Food}
-                  questionnaireBoxText={"Food"}
-                  questionnaireBoxClick={() => handleOptionSelection("Food")}
+                  questionnaireBoxText="Food"
+                  questionnaireBoxClick={() => handleExperienceClick("Food")}
                 />
               </div>
             </div>
           </div>
-          <Button
-            buttonTextHolder={"Done"}
-            buttonStyle={{ paddingTop: "40px", paddingBottom: "60px" }}
-            buttonOnClick={handleNext}
-          />
+          <Button buttonTextHolder="Done" buttonOnClick={handleNext} />
         </div>
       </wrapper-screen>
     </default-screen>

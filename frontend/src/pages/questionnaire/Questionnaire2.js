@@ -1,27 +1,26 @@
 import React, { useContext } from "react";
-import { QuestionnaireContext } from "./QuestionnaireContext";
-import "../../styles/questionnaire/questionnaire.css";
-import QuestionnaireSquare from "../../components/QuestionnaireSquare";
-import NextButton from "../../components/NextButton";
 import { useNavigate } from "react-router-dom";
 import TopContainer from "../../components/TopContainer";
+import QuestionnaireSquare from "../../components/QuestionnaireSquare";
+import NextButton from "../../components/NextButton";
 import Female from "../../assets/female.svg";
 import Male from "../../assets/male.svg";
 import Horse from "../../assets/Vector.svg";
 import VectorX from "../../assets/VectorX.svg";
+import { QuestionnaireContext } from "./QuestionnaireContext";
+import "../../styles/questionnaire/questionnaire.css";
+import "../../styles/App.css";
 
 export default function Questionnaire2() {
   const navigate = useNavigate();
-  const { questionnaireData, setQuestionnaireData } = useContext(
-    QuestionnaireContext
-  );
+  const { setGender } = useContext(QuestionnaireContext);
 
-  const handleGenderSelection = (gender) => {
-    setQuestionnaireData({ ...questionnaireData, gender });
-  };
+  const handleNext = (selectedGender) => {
+    // Save the selected gender to the context
+    setGender(selectedGender);
 
-  const handleNext = () => {
-    navigate("/Questionnaire3/");
+    // Navigate to the next questionnaire page
+    navigate("/Questionnaire3");
   };
 
   return (
@@ -32,44 +31,44 @@ export default function Questionnaire2() {
           logoSmallFill="white"
           backClick={() => navigate("/Questionnaire1")}
         />
-        <div className="questionnaire_container">
-          <div className="questionnaire_middle_container">
-            <div className="questionnaire_middle_container_text_container">
-              <p id="questionnaire_index_text">{"2/4"}</p>
-              <p id="questionnaire_question">{"Gender:"}</p>
+        <div className="questionnaire-container">
+          <div className="questionnaire-middle-container">
+            <div className="questionnaire-middle-container-text-container">
+              <p className="questionnaire-index-text">2/4</p>
+              <p className="questionnaire-question">Gender:</p>
             </div>
-            <div className="questionnaire_options_container">
-              <div className="questionnaire_option">
+            <div className="questionnaire-options-container">
+              <div className="questionnaire-option">
                 <QuestionnaireSquare
                   questionnaireBoxImage={Female}
                   questionnaireBoxText={"Female"}
-                  questionnaireBoxClick={() => handleGenderSelection("Female")}
+                  questionnaireBoxClick={() => handleNext("Female")}
                 />
               </div>
-              <div className="questionnaire_option">
+              <div className="questionnaire-option">
                 <QuestionnaireSquare
                   questionnaireBoxImage={Male}
                   questionnaireBoxText={"Male"}
-                  questionnaireBoxClick={() => handleGenderSelection("Male")}
+                  questionnaireBoxClick={() => handleNext("Male")}
                 />
               </div>
-              <div className="questionnaire_option">
+              <div className="questionnaire-option">
                 <QuestionnaireSquare
                   questionnaireBoxImage={Horse}
                   questionnaireBoxText={"Complex"}
-                  questionnaireBoxClick={() => handleGenderSelection("Complex")}
+                  questionnaireBoxClick={() => handleNext("Complex")}
                 />
               </div>
-              <div className="questionnaire_option">
+              <div className="questionnaire-option">
                 <QuestionnaireSquare
                   questionnaireBoxImage={VectorX}
                   questionnaireBoxText={"Prefer not to say"}
-                  questionnaireBoxClick={() => handleGenderSelection("Prefer not to say")}
+                  questionnaireBoxClick={() => handleNext("Prefer not to say")}
                 />
               </div>
             </div>
-            <NextButton NextOnClick={handleNext} />
           </div>
+          <NextButton NextOnClick={handleNext} />
         </div>
       </wrapper-screen>
     </default-screen>

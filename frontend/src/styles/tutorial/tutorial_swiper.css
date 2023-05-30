@@ -11,10 +11,6 @@
   height: 100vh;
 }
 
-.swiper-wrapper {
-  
-}
-
 .swiper-slide {
   display: flex;
 }
@@ -62,8 +58,6 @@ span[slot="container-start"] {
   align-items: center;
   width: 100vw;
 }
-
-
 
 /* Page 1*/
 
@@ -138,7 +132,6 @@ span[slot="container-start"] {
   letter-spacing: 0em;
   text-align: left;
 }
-
 
 .my-prev-button {
   position: absolute;

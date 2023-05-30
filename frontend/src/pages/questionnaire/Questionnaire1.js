@@ -5,20 +5,18 @@ import { QuestionnaireContext } from "./QuestionnaireContext";
 import NextButton from "../../components/NextButton";
 import { useNavigate } from "react-router-dom";
 import TopContainer from "../../components/TopContainer";
+import "../../styles/App.css";
 
 export default function Questionnaire1() {
   const navigate = useNavigate();
-  const { questionnaireData, setQuestionnaireData } = useContext(
-    QuestionnaireContext
-  );
+  const { setAge } = useContext(QuestionnaireContext);
 
-  const handleAgeSelection = (age) => {
-    setQuestionnaireData({ ...questionnaireData, age });
-    console.log("Chosennn")
-  };
+  const handleNext = (selectedAge) => {
+    // Save the selected age to the context
+    setAge(selectedAge);
 
-  const handleNext = () => {
-    navigate("/Questionnaire2/");
+    // Navigate to the next questionnaire page
+    navigate("/Questionnaire2");
   };
 
   return (
@@ -29,44 +27,44 @@ export default function Questionnaire1() {
           logoSmallFill="white"
           backClick={() => navigate("/TutorialSwiper/5")}
         />
-        <div className="questionnaire_container">
-          <div className="questionnaire_middle_container">
-            <div className="questionnaire_middle_container_text_container">
-              <p id="questionnaire_index_text">{"1/4"}</p>
-              <p id="questionnaire_question">{"Age:"}</p>
+        <div className="questionnaire-container">
+          <div className="questionnaire-middle-container">
+            <div className="questionnaire-middle-container-text-container">
+              <p className="questionnaire-index-text">1/4</p>
+              <p className="questionnaire-question">Age:</p>
             </div>
-            <div className="questionnaire_options_container">
-              <div className="questionnaire_option">
+            <div className="questionnaire-options-container">
+              <div className="questionnaire-option">
                 <QuestionnaireSquare
                   questionnaireBoxImageStyle={{ display: "none" }}
                   questionnaireBoxText={"<20"}
-                  questionnaireBoxClick={() => handleAgeSelection("<20")}
+                  questionnaireBoxClick={() => handleNext("<20")}
                 />
               </div>
-              <div className="questionnaire_option">
+              <div className="questionnaire-option">
                 <QuestionnaireSquare
                   questionnaireBoxImageStyle={{ display: "none" }}
                   questionnaireBoxText={"22-39"}
-                  questionnaireBoxClick={() => handleAgeSelection("22-39")}
+                  questionnaireBoxClick={() => handleNext("22-39")}
                 />
               </div>
-              <div className="questionnaire_option">
+              <div className="questionnaire-option">
                 <QuestionnaireSquare
                   questionnaireBoxImageStyle={{ display: "none" }}
                   questionnaireBoxText={"40-59"}
-                  questionnaireBoxClick={() => handleAgeSelection("40-59")}
+                  questionnaireBoxClick={() => handleNext("40-59")}
                 />
               </div>
-              <div className="questionnaire_option">
+              <div className="questionnaire-option">
                 <QuestionnaireSquare
                   questionnaireBoxImageStyle={{ display: "none" }}
                   questionnaireBoxText={"60+"}
-                  questionnaireBoxClick={() => handleAgeSelection("60+")}
+                  questionnaireBoxClick={() => handleNext("60+")}
                 />
               </div>
             </div>
-            <NextButton NextOnClick={handleNext} />
           </div>
+          <NextButton NextOnClick={handleNext} />
         </div>
       </wrapper-screen>
     </default-screen>

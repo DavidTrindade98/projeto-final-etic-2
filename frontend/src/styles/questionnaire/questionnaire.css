@@ -1,21 +1,21 @@
 @import "../App.css";
 
-.questionnaire_container {
+.questionnaire-container {
   display: flex;
   flex-direction: column;
 }
 
-.questionnaire_middle_container {
+.questionnaire-middle-container {
   display: grid;
   justify-content: center;
 }
 
-.questionnaire_middle_container_text_container {
+.questionnaire-middle_container-text-container {
   display: flex;
   flex-direction: column;
 }
 
-#questionnaire_index_text {
+.questionnaire-index-text{
   font-family: var(--inter-font);
   font-style: normal;
   font-weight: 700;
@@ -24,7 +24,7 @@
   color: var(--background2);
 }
 
-#questionnaire_question {
+.questionnaire-question{
   font-family: var(--inter-font);
   font-size: 16px;
   font-weight: 700;
@@ -34,7 +34,7 @@
   float: left;
 }
 
-.questionnaire_options_container {
+.questionnaire-options-container {
   display: grid;
   align-items: center;
   grid-template-columns: auto auto;
@@ -43,7 +43,7 @@
   justify-content: center;
 }
 
-.questionnaire_option {
+.questionnaire-option {
   display: flex;
 }
 

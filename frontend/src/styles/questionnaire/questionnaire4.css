@@ -1,6 +1,6 @@
 @import "../App.css";
 
-.questionnaire_middle_container_text_container input::placeholder {
+.questionnaire-middle-container-text-container input::placeholder {
   font-family: var(--inter-font);
   font-style: normal;
   font-weight: 400;

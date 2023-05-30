@@ -48,7 +48,7 @@ export default function Signup() {
       .then((response) => {
         if (response.ok) {
           // Signup successful, navigate to another page
-          navigate("/TutorialSwiper"); // Replace "/success-page" with your desired path
+          navigate("/Login"); // Replace "/success-page" with your desired path
         } else {
           // Signup failed, display error message
           throw new Error("Registration failed");
