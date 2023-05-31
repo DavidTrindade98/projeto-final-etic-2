@@ -7,22 +7,28 @@ import SearchBar from "../../components/SearchBar";
 import down_arrow from "../../assets/down_arrow.svg";
 
 export default function FAQ() {
+
+  const navigate = useNavigate();
+
+  // State for menu overlay
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const toggleMenu = () => {
     setIsOpenMenu(!isOpenMenu);
   };
 
-  const navigate = useNavigate();
-
+  // State for selected question
   const [selectedQuestion, setSelectedQuestion] = useState(null);
 
   const handleQuestionClick = (index) => {
-    if (selectedQuestion === index) {
-      setSelectedQuestion(null);
-    } else {
-      setSelectedQuestion(index);
-    }
-  };
+  // Check if the clicked question is already selected
+  if (selectedQuestion === index) {
+    // Deselect the question by setting selectedQuestion to null
+    setSelectedQuestion(null);
+  } else {
+    // Select the clicked question by setting selectedQuestion to the index
+    setSelectedQuestion(index);
+  }
+};
 
   return (
     <default-screen>

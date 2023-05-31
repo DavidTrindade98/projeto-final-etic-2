@@ -43,7 +43,7 @@ export default function MyProfile() {
             <img src={avatar_template} alt="avatar"></img>
           </div>
           <div className="myprofile-second-container">
-            <h1>Jane</h1>
+            <h1>Dan</h1>
             <div className="filter-stars-container">
               <img src={star} alt="star"></img>
               <img src={star} alt="star"></img>

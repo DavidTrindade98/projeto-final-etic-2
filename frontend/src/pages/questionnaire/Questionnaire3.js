@@ -7,9 +7,16 @@ import "../../styles/questionnaire/questionnaire.css";
 import "../../styles/App.css";
 
 export default function Questionnaire3() {
+  // State variable and function to navigate to different routes
   const navigate = useNavigate();
+
+  // Importing setLiveIn and setCityAdvice functions from QuestionnaireContext
   const { setLiveIn, setCityAdvice } = useContext(QuestionnaireContext);
+
+  // State variable and function to track the local live-in value
   const [localLiveIn, setLocalLiveIn] = useState("");
+
+  // State variable and function to track the local city advice array
   const [localCityAdvice, setLocalCityAdvice] = useState([]);
 
   const handleNext = () => {

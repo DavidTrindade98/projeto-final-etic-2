@@ -18,10 +18,16 @@ import "../../styles/questionnaire/questionnaire.css";
 import "../../styles/App.css";
 
 export default function Questionnaire4() {
+  // Importing navigate function from React Router DOM
   const navigate = useNavigate();
+
+  // Importing setExperiences function from QuestionnaireContext
   const { setExperiences } = useContext(QuestionnaireContext);
+
+  // Initializing state variables
   const [selectedExperiences, setSelectedExperiences] = useState([]);
 
+  // Function to handle experience click
   const handleExperienceClick = (experience) => {
     setSelectedExperiences((prevExperiences) => {
       if (prevExperiences.includes(experience)) {
@@ -34,6 +40,7 @@ export default function Questionnaire4() {
     });
   };
 
+  // Function to handle the next button click
   const handleNext = () => {
     // Save the selected experiences to the context
     setExperiences(selectedExperiences);
@@ -137,7 +144,11 @@ export default function Questionnaire4() {
               </div>
             </div>
           </div>
-          <Button buttonTextHolder="Done" buttonOnClick={handleNext} buttonStyle2={{marginBottom: '5vh' , marginTop: '5vh' }} />
+          <Button
+            buttonTextHolder="Done"
+            buttonOnClick={handleNext}
+            buttonStyle2={{ marginBottom: "5vh", marginTop: "5vh" }}
+          />
         </div>
       </wrapper-screen>
     </default-screen>

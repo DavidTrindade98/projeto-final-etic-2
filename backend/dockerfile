@@ -1,13 +1,20 @@
+# Set the base image to Python
 FROM python:3.11
 
+# Install Poetry package manager
 RUN pip install poetry
 
+# Configure Poetry to not create a virtual environment
 RUN poetry config virtualenvs.create false
 
+# Set the working directory to /workspace
 WORKDIR /workspace 
 
+# Copy all files from the current directory to the /workspace directory
 COPY . .
 
+# Install project dependencies using Poetry
 RUN poetry install
 
+# Set the default command to run the application using Uvicorn
 CMD [ "uvicorn", "src.main:app", "--host", "0.0.0.0" ]

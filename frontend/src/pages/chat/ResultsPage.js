@@ -87,7 +87,7 @@ export default function ResultsPage() {
               </div>
               </div>
             <div className="ask-for-advice">
-                <p>Ask for advice {">"}</p>
+                <p onClick={() => navigate("/Chat/Messages")}>Ask for advice {">"}</p>
             </div>
           </div>
         </div>

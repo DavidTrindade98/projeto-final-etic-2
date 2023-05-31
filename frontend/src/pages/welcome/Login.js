@@ -12,29 +12,34 @@ import eye_open from "../../assets/eye_open.svg";
 import eye_closed from "../../assets/eye_closed.svg";
 
 export default function Login() {
+  // Use the useNavigate hook from react-router-dom for navigation
   const navigate = useNavigate();
+
+  // State variables
   const [isPasswordVisible, setPasswordVisible] = useState(false);
   const [error, setError] = useState("");
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
+  // Toggle password visibility
   const handleTogglePassword = (e) => {
     e.preventDefault();
     setPasswordVisible((prevState) => !prevState);
   };
 
+  // Handle login form submission
   const handleLogin = async (e) => {
     e.preventDefault();
-    
+
     try {
-      const response = await fetch('http://localhost:8000/request/login/', {
-        method: 'POST',
+      const response = await fetch("http://localhost:8000/request/login/", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           email,
-          password
+          password,
         }),
       });
 
@@ -42,8 +47,9 @@ export default function Login() {
         const data = await response.json();
         const accessToken = data.access_token;
 
-        localStorage.setItem('accessToken', accessToken);
-        console.log(accessToken)
+        // Store access token in local storage
+        localStorage.setItem("accessToken", accessToken);
+
         navigate("/TutorialSwiper/1");
         // Redirect or perform any other necessary actions
       } else {

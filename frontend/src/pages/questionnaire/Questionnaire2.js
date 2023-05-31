@@ -12,7 +12,11 @@ import "../../styles/questionnaire/questionnaire.css";
 import "../../styles/App.css";
 
 export default function Questionnaire2() {
+  
+  // State variable and function to navigate to different routes
   const navigate = useNavigate();
+
+  // Importing setGender function from QuestionnaireContext
   const { setGender } = useContext(QuestionnaireContext);
 
   const handleNext = (selectedGender) => {

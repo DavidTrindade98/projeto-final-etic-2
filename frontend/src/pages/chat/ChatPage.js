@@ -6,18 +6,22 @@ import { useNavigate } from "react-router-dom";
 import avatar_template from "../../assets/avatar_template.svg";
 
 export default function ChatPage() {
+  // State variable and function to navigate to different routes
+  const navigate = useNavigate();
+
+  // State variable and function to toggle menu
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const toggleMenu = () => {
     setIsOpenMenu(!isOpenMenu);
   };
 
+  // State variable and function to track the active text
   const [activeText, setActiveText] = useState("traveller");
 
+  // Function to handle text click and update the active text
   const handleTextClick = (text) => {
     setActiveText(text);
   };
-
-  const navigate = useNavigate();
 
   return (
     <wrapper-screen>
@@ -76,7 +80,13 @@ export default function ChatPage() {
                       <p>2m</p>
                     </div>
                     <div className="chat-messages-user-preview">
-                      <p>Hi! Do you know any good Mexican res A expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de texto em publicações para testar e ajustar aspectos visuais antes de utilizar conteúdo real.{"..."}</p>
+                      <p>
+                        Hi! Do you know any good Mexican res A expressão Lorem
+                        ipsum em design gráfico e editoração é um texto padrão
+                        em latim utilizado na produção gráfica para preencher os
+                        espaços de texto em publicações para testar e ajustar
+                        aspectos visuais antes de utilizar conteúdo real.{"..."}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -99,7 +109,10 @@ export default function ChatPage() {
                       <p>11m</p>
                     </div>
                     <div className="chat-messages-user-preview">
-                      <p>Hi! Hey, are there any discounts for stu visuais antes de utilizar conteúdo real.{"..."}</p>
+                      <p>
+                        Hi! Hey, are there any discounts for stu visuais antes
+                        de utilizar conteúdo real.{"..."}
+                      </p>
                     </div>
                   </div>
                 </div>

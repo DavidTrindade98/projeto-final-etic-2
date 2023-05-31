@@ -8,7 +8,11 @@ import TopContainer from "../../components/TopContainer";
 import "../../styles/App.css";
 
 export default function Questionnaire1() {
+  
+  // State variable and function to navigate to different routes
   const navigate = useNavigate();
+
+  // Importing setAge function from QuestionnaireContext
   const { setAge } = useContext(QuestionnaireContext);
 
   const handleNext = (selectedAge) => {

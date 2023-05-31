@@ -11,28 +11,32 @@ import eye_closed from "../../assets/eye_closed.svg";
 import Button from "../../components/Button";
 
 export default function Signup() {
+  // Use the useNavigate hook from react-router-dom for navigation
   const navigate = useNavigate();
 
+  // State variables
   const [isPasswordVisible, setPasswordVisible] = useState(false);
   const [error, setError] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
+  // Toggle password visibility
   const handleTogglePassword = (e) => {
     e.preventDefault();
     setPasswordVisible((prevState) => !prevState);
   };
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
+  // Validate email format
   const validateEmail = (email) => {
-    // Expression to validate email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
 
+  // Handle signup form submission
   const handleSignup = (e) => {
     e.preventDefault();
+
     if (!validateEmail(email)) {
       setError("Please enter a valid email address");
       return;

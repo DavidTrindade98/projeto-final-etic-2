@@ -10,21 +10,22 @@ import SearchBar from "../../components/SearchBar";
 import MenuOverlay from "./MenuOverlay";
 import FilterOverlay from "./FilterOverlay";
 
-
 export default function LocalsSearch() {
-
+  // State variable and function to navigate to different routes
   const navigate = useNavigate();
 
+  // State variable and function to toggle filter
   const [isOpenFilter, setIsOpenFilter] = useState(false);
   const toggleFilter = () => {
     setIsOpenFilter(!isOpenFilter);
   };
 
+  // State variable and function to toggle menu
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const toggleMenu = () => {
     setIsOpenMenu(!isOpenMenu);
   };
-  
+
   return (
     <default-screen>
       <wrapper-screen>
@@ -41,7 +42,7 @@ export default function LocalsSearch() {
                 logoStyle={{ display: "none" }}
                 backClick={toggleMenu}
               />
-              <MenuOverlay closeMenu={toggleMenu}/>
+              <MenuOverlay closeMenu={toggleMenu} />
             </wrapper-screen>
           </div>
         </div>
@@ -88,4 +89,3 @@ export default function LocalsSearch() {
     </default-screen>
   );
 }
-

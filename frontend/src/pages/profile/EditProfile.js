@@ -11,6 +11,7 @@ import ArtSVG from "../../components/svgs/ArtSVG";
 import FoodSVG from "../../components/svgs/FoodSVG";
 
 export default function EditProfile() {
+  // State variables
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const toggleMenu = () => {
     setIsOpenMenu(!isOpenMenu);
@@ -22,11 +23,13 @@ export default function EditProfile() {
 
   const fileInputRef = useRef(null);
 
+  // Handle photo change
   const handlePhotoChange = (e) => {
     const newPhoto = URL.createObjectURL(e.target.files[0]);
     setPhoto(newPhoto);
   };
 
+  // Handle click event on photo change button
   const handleClick = () => {
     fileInputRef.current.click();
   };

@@ -7,6 +7,7 @@ import avatar_template from "../../assets/avatar_template.svg";
 import Button from "../../components/Button";
 
 export default function ProfileUpdated() {
+  // State variables
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const toggleMenu = () => {
     setIsOpenMenu(!isOpenMenu);
@@ -18,11 +19,13 @@ export default function ProfileUpdated() {
 
   const fileInputRef = useRef(null);
 
+  // Handle photo change
   const handlePhotoChange = (e) => {
     const newPhoto = URL.createObjectURL(e.target.files[0]);
     setPhoto(newPhoto);
   };
 
+  // Handle click event on photo change button
   const handleClick = () => {
     fileInputRef.current.click();
   };
