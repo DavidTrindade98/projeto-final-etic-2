@@ -5,6 +5,7 @@ import TopContainer from "../../components/TopContainer";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import MenuOverlay from "./MenuOverlay";
+import FilterOverlay from "./FilterOverlay";
 import filter from "../../assets/filter.svg";
 import SearchBar from "../../components/SearchBar";
 import star from "../../assets/star.svg";
@@ -44,6 +45,18 @@ export default function ResultsPage() {
                 backClick={toggleMenu}
               />
               <MenuOverlay closeMenu={toggleMenu}/>
+            </wrapper-screen>
+          </div>
+        </div>
+        <div className={`filter-overlay ${isOpenFilter ? "open" : ""}`}>
+          <div className="filter-menu">
+            <wrapper-screen>
+              <TopContainer
+                backButtonFill="#F0694F"
+                logoStyle={{ display: "none" }}
+                backClick={toggleFilter}
+              />
+              <FilterOverlay />
             </wrapper-screen>
           </div>
         </div>
